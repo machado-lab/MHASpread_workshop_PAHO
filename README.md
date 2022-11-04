@@ -35,8 +35,9 @@ We will focus on the application of such epidemiological models using data with 
    * The number of animals transported for each species.
 
 ## :computer: Computer requirements
+In general, any computer medium to high quality released during the last five years should be able to support R and Rstudio, however, there are minimum computer requirements that should be considered.
 
-- [ ]  Intel Core i5 (4 CPUs)  6th generation or above or equivalent AMD X8 FX-8350 @ 4GHZ (8 CPUs) or above. 
+- [ ]  Intel Core i5 (4 CPUs)  6th generation or above or equivalent AMD X8  @ 4GHZ (8 CPUs) or above. 
 - [ ]  Memory: 8GB.
 - [ ]  HDD Space: 65GB.
 
