@@ -9,8 +9,8 @@
 > In this four-day workshop, we provide a gentle introduction to a range of mathematical models used to simulate the spread and control of livestock diseases. You learn how such models can be used to make informed decisions **before**, **during**, and **after** an animal health emergency.
 <br /> We will focus on the application of such epidemiological models while demonstrating their use with real data while simulating FMD outbreaks.
 
-We use the MHASpread: A multi-host animal spread stochastic multilevel model (version 0.1.1) which is an R package to be used throughout the training. The MHASpread allows for explicit specification of species-specific disease transmission probability, among other important transmission dynamics of disease infecting multiple species, such as FMD. This model considers the entry and exit of animals given between-farm animal movements, movements into slaughterhouses, births, and, deaths, for each species. 
-You will learn how to use MHASpread, including the simulation of the introduction, and dissemination of FMD in our own country. You will have access to highly specialized computational and epidemiological tools within an easy-to-use workflow. 
+>We use the MHASpread: A multi-host animal spread stochastic multilevel model (version 0.1.1) which is an R package to be used throughout the training. The MHASpread allows for explicit specification of species-specific disease transmission probability, among other important transmission dynamics of disease infecting multiple species, such as FMD. This model considers the entry and exit of animals given between-farm animal movements, movements into slaughterhouses, births, and, deaths, for each species. 
+>You will learn how to use MHASpread, including the simulation of the introduction, and dissemination of FMD in our own country. You will have access to highly specialized computational and epidemiological tools within an easy-to-use workflow. 
 
 
 <br /> 
