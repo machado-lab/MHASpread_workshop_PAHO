@@ -6,16 +6,29 @@
 
 ## :mortar_board: About this workshop
 
-> In this four-day workshop, you will have an introduction to a range of mathematical models used to simulate the spread of livestock diseases. We will focus on the application of such epidemiological models and demonstrate with real data, how you can use mathematical transmission models to make informed decisions before, during, and after an animal health emergency.  
-We use the MHASpread: A multi-host animal spread stochastic multilevel model (version 0.1.0) which is an R package to be used throughout the training. The MHASpread allows for explicit specification of species-specific disease transmission probability, among other important transmission dynamics of disease infecting multiple species, such as FMD. This model considers the entry and exit of animals given between-farm animal movements, movements into slaughterhouses, births, and, deaths, for each species. 
-You will learn how to use MHASpread, including the simulation of the introduction, and dissemination of FMD in the state of Rio Grande do Sul, Brazil. You will have access to highly specialized computational and epidemiological tools within an easy-to-use workflow. 
-For the second half of the workshop, you will learn how similar models are used in the preparation of ASF in Rio Grande do Sul, Brazil, and in the United States. We will demonstrate how the “PigSpread” model works. PigSpread is also a mathematical model specially developed to be used in the dynamics of the disease of swine.
+> In this four-day workshop, we provide a gentle introduction to a range of mathematical models used to simulate the spread and control of livestock diseases. You learn how such models can be used to make informed decisions **before**, **during**, and **after** an animal health emergency.
+<br /> We will focus on the application of such epidemiological models while demonstrating their use with real data while simulating FMD outbreaks. The real data we will need includes
+
 
 ## :bomb: Aims of the workshop
 * Learn how to use the MHASpread v.0.1.0 package, introduction, and control of FMD.
     - [ ]  Overview of the model outputs and their interpretation.
     - [ ]  MHASpread to simulate FMD countermeasure actions (depopulation, vaccination, and traceability). 
     - [ ]  To be exposed to additional transmission models.
+
+## :floppy_disk: Data and files required 
+
+We will focus on the application of such epidemiological models while demonstrating their use with real data while simulating FMD outbreaks. The real data we will need includes:
+
+1. List of farms with unique identification, geolocation (lat and long), and a number of animals per premise by species (e.i., farm A has 10 cattle, 100 swine, and 3 goats).
+2. Number of animals born alive and mortality per premise and species.
+3. Between-farm and slaughterhouse movement data, which include:    
+   * Unique identification at origin and at the destination.
+   * Date of the movement.
+   * The number of animals transported for each species.
+
+
+
 
 ## Pre workshop activities 
 
@@ -62,12 +75,12 @@ Gustavo Machado [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/or
 [MachadoLAb](https://machado-lab.github.io/) 
 
 ## :muscle: Sponsors
-<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/pahologo.png?raw=true" align="left" width="500" ></a>
-<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/fundesalogo.jpg?raw=true" align="left" width="200" ></a>
+<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/pahologo.png?raw=true" align="center" width="600" ></a>
+<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/fundesalogo.jpg?raw=true" align="left" width="300" ></a>
 
-<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/ncstate-type-4x1-red-min.png?raw=true" align="left" width="200" ></a>
+<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/ncstate-type-4x1-red-min.png?raw=true" align="right" width="300" ></a>
 
 
-<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/seapilogo.png?raw=true" align="left" width="300" ></a>
+<a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/seapilogo.png?raw=true" align="center" width="300" ></a>
 
 
