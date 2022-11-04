@@ -46,7 +46,7 @@ We will focus on the application of such epidemiological models using data with 
 
 | **Topic**                          | **Activity and assignment**                                                                                                       | **Date** |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------|
-| [R & RStudio](https://github.com/machado-lab/workshop_MHASpread/tree/main/install_RStudio_and_packages)| Video call to set Rstudio in your computer [_link to call here:_](https://ncsu.zoom.us/j/98163871036?pwd=b0g2dnRSWUJ3UDFidWFES2p0TGtpZz09)                                                                                         | Thursday, November 10 |
+| [R & RStudio](https://github.com/machado-lab/workshop_MHASpread/tree/main/install_RStudio_and_packages)| Video call to set Rstudio in your computer [_link to call here:_](https://ncsu.zoom.us/j/98163871036?pwd=b0g2dnRSWUJ3UDFidWFES2p0TGtpZz09)                                                                                         | November/10/22 |
 | Introduction to disease spread     | [A Practical Introduction to Mechanistic Modeling of Disease Transmission in Veterinary Science](https://doi.org/10.3389/fvets.2020.546651)                                    | November/28/22 |
 | Use of data to prepare against FMD | [Challenges and opportunities for using national animal datasets to support foot-and-mouth disease control]( https://doi.org/10.1111/tbed.13858)                         | December/05/22 |
 
