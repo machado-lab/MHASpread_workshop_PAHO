@@ -13,7 +13,7 @@
 >You will learn how to use MHASpread, including the simulation of the introduction, and dissemination of FMD in our own country. You will have access to highly specialized computational and epidemiological tools within an easy-to-use workflow. 
 
 
-<br /> 
+
 
 ## :bomb: Aims of the workshop
 * Learn how to use the MHASpread v.0.1.0 package, introduction, and control of FMD.
@@ -21,7 +21,7 @@
     - [ ]  MHASpread to simulate FMD countermeasure actions (depopulation, vaccination, and traceability). 
     - [ ]  To be exposed to additional transmission models.
 
-<br /> 
+
 
 ## :floppy_disk: Data and files required 
 
