@@ -53,6 +53,7 @@ In general, any computer medium to high quality released during the last five ye
 
 
 ## :calendar: Calendar 
+Pre-workshop software installation December 10-11
 
 | **Day-1 (December 12)** | **Topics** |  
 |---|---|
