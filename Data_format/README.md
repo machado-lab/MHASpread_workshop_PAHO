@@ -20,16 +20,19 @@ The `population` database is a data frame object where each line represents a no
 | **I\_bov\_pop**   | Represents the infected bovine population                              |
 | **R\_bov\_pop**   | Represents the recovered bovine population                             |
 | **V\_bov\_pop** | Represents the bovine population that have been vaccinated    |
+| **D\_bov\_pop** | Represents the bovine population that have been depopulated    |
 | **S\_swi\_pop**   | Represents the  susceptible swine population                             |
 | **E\_swi\_pop**   | Represents the exposed swine population                                |
 | **I\_swi\_pop**   | Represents the infected swine population                               |
 | **R\_swi\_pop**   | Represents the recovered swine population                              |
 | **V\_swi\_pop** | Represents the swine population that have been vaccinated    |
+| **D\_swi\_pop** | Represents the swine population that have been depopulated    |
 | **S\_small\_pop** | Represents the susceptible small ruminants population                  |
 | **E\_small\_pop** | Represents the exposed small ruminants population                      |
 | **I\_small\_pop** | Represents the infected small ruminants population                     |
 | **R\_small\_pop** | Represents the recovered small ruminants population                    |
 | **V\_small\_pop** | Represents the small ruminants population that have been vaccinated    |
+| **D\_small\_pop** | Represents the small ruminants population that have been depopulated    |
 | **long**          | The longitude of the node in Universal Transverse Mercator \(UTM\) |
 | **lat**           | The latitude of the node in Universal Transverse Mercator \(UTM\)      |
 
