@@ -47,10 +47,10 @@ In general, any computer medium to high quality released during the last five ye
 
 | **Topic**                          | **Activity and assignment**                                                                                                       | **Date** |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------|
-| [R & RStudio](https://github.com/machado-lab/workshop_MHASpread/tree/main/install_RStudio_and_packages)| Video call to set Rstudio in your computer [_link to call here:_](https://ncsu.zoom.us/j/98163871036?pwd=b0g2dnRSWUJ3UDFidWFES2p0TGtpZz09)                                                                                         | November/10/22 |
+| [R & RStudio](https://github.com/machado-lab/workshop_MHASpread/tree/main/install_RStudio_and_packages)| Final installation and validation                                                                                   | December 10 and 11 |
 | Introduction to disease spread     | [A Practical Introduction to Mechanistic Modeling of Disease Transmission in Veterinary Science](https://doi.org/10.3389/fvets.2020.546651)                                    | November/28/22 |
 | Use of data to prepare against FMD | [Challenges and opportunities for using national animal datasets to support foot-and-mouth disease control]( https://doi.org/10.1111/tbed.13858)                         | December/05/22 |
-
+| Prepare countries data to be used during the workshop and MHASpread package | Instructors and country members face-to-face meeting | December 10 and 11 |
 
 ## :calendar: Calendar 
 Pre-workshop software installation December 10-11
