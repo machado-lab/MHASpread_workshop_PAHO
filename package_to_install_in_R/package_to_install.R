@@ -3,12 +3,7 @@
 #       List of packages required by MHASpread              #
 #===========================================================#
 # the next lines require the package adn if is not pre-installed trigger the instalation request
-if (!require(shinydashboard)){install.packages("shinydashboard") };library(shinydashboard)
-if (!require(shinymanager)){install.packages("shinymanager") };library(shinymanager)
-if (!require(dashboardthemes)){install.packages("dashboardthemes") };library(dashboardthemes)
-if (!require(shiny)){install.packages("shiny") };library(shiny)
-if (!require(shinythemes)){install.packages("shinythemes") };library(shinythemes)
-if (!require(shinycssloaders)){install.packages("shinycssloaders") };library(shinycssloaders)
+
 if (!require(doParallel)){install.packages("doParallel") };library(doParallel)
 if (!require(magrittr)){install.packages("magrittr") };library(magrittr)
 if (!require(methods)){install.packages("methods") };library(methods)
@@ -27,3 +22,15 @@ if (!require(parallel)){install.packages("parallel") };library(parallel)
 if (!require(ggsci)){install.packages("ggsci") };library(ggsci)
 if (!require(tidyverse)){install.packages("tidyverse") };library(tidyverse)
 if (!require(leaflet)){install.packages("leaflet") };library(leaflet)
+if (!require(crayon)){install.packages("crayon") };library(crayon) 
+if (!require(lwgeom)){install.packages("lwgeom") };library(lwgeom) 
+if (!require(sf)){install.packages("sf") };library(sf) 
+if (!require(cowsay)){install.packages("cowsay") };library(cowsay) 
+if (!require(fastmatch)){install.packages("fastmatch") };library(fastmatch)
+if (!require(leaflet.extras)){install.packages("leaflet.extras") };library(leaflet.extras) 
+if (!require(leaflet.extras)){install.packages("leaflet.extras") };library(leaflet.extras)
+if (!require(reshape2)){install.packages("reshape2") };library(reshape2) #optional
+
+
+
+
