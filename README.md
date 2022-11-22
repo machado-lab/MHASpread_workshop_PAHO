@@ -47,6 +47,7 @@ In general, any computer medium to high quality released during the last five ye
 
 | **Topic**                          | **Activity and assignment**                                                                                                       | **Date** |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------|
+| R packages installation videocall | Install all R packages depencies via videocall. [Link to call click here.](https://ncsu.zoom.us/j/99221345276?pwd=K0hFY1dQR3AzUlJXTjFZSU1PblNBdz09)                                               | November 29; 14:00 - 16:00(GMT-05:00) Eastern Time - New York |
 | [R & RStudio](https://github.com/machado-lab/workshop_MHASpread/tree/main/install_RStudio_and_packages)| Final installation and validation                                                                                   | December 10 and 11 |
 | Introduction to disease spread     | [A Practical Introduction to Mechanistic Modeling of Disease Transmission in Veterinary Science](https://doi.org/10.3389/fvets.2020.546651)                                    | November/28/22 |
 | Use of data to prepare against FMD | [Challenges and opportunities for using national animal datasets to support foot-and-mouth disease control]( https://doi.org/10.1111/tbed.13858)                         | December/05/22 |
