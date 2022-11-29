@@ -13,7 +13,6 @@ if (!require(snow)){install.packages("snow") };library(snow)
 if (!require(lubridate)){install.packages("lubridate") };library(lubridate)
 if (!require(DBI)){install.packages("DBI") };library(DBI)
 if (!require(scales)){install.packages("scales") };library(scales)
-if (!require(EpiContactTrace)){install.packages("EpiContactTrace") };library(EpiContactTrace)
 if (!require(sampler)){install.packages("sampler") };library(sampler)
 if (!require(sp)){install.packages("sp") };library(sp)
 if (!require(rgeos)){install.packages("rgeos") };library(rgeos)
@@ -29,8 +28,8 @@ if (!require(cowsay)){install.packages("cowsay") };library(cowsay)
 if (!require(fastmatch)){install.packages("fastmatch") };library(fastmatch)
 if (!require(leaflet.extras)){install.packages("leaflet.extras") };library(leaflet.extras) 
 if (!require(leaflet.extras)){install.packages("leaflet.extras") };library(leaflet.extras)
-if (!require(reshape2)){install.packages("reshape2") };library(reshape2) #optional
-
+if (!require(reshape2)){install.packages("reshape2") };library(reshape2) 
+if (!require(mapview)){install.packages("mapview") };library(mapview) 
 
 
 
