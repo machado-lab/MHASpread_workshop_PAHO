@@ -9,6 +9,9 @@ The MHASpread package works with two main files: 1) a file containing population
 ### Population database 
 The `population` database is a data frame object where each line represents a node (farm, premises, municipality) location, and the columns denote the features of this node. The next table describe the meaning of each column in the population database. 
 
+**Note:** to prepare the data, the number of animals should be added in the over the suceptible compartment which means that is required to complete the columns **S\_bov\_pop** , **S\_swi\_pop**, and **S\_small\_pop** with the number of animals in each farm  according with the host-specie. farms without animals from specific specie should be complete with 0.
+
+Please notice that will be require the geolocalion of the farms is requested as degree in the column **longitude** and **latitude** and also in UTM over the columns  **long**, **lat**.   
 
 | **Column**        | **Description**                                                        |
 |-------------------|-------------------------------------------------------------------------|
