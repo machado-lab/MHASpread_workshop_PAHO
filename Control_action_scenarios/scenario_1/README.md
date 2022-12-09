@@ -136,6 +136,22 @@ Here we are going to take account of the depopulation of farms, for modeling pur
 This function will implement daily on-farm vaccination in the simulated population. the parameter "limit_per_day_farms" will set the maximum number of farms to be vaccinated per day. The model also allows you to decide if you want to vaccinate infected farms or not "vacc_infectious_farms". Additionally, the parameters `infected_zone`, `buffer_zone`, and `surveillance_zone` will select in which areas the vaccination will be applied. Next, the parameters `vacc_bovine`, `vacc_swine`, and `vacc_small` will help to select in which species can be vaccinated or not. Finally we can set the vaccine efficacy for example 90% efficacy by using `vaccine_efficacy=0.9`
 
 
+### Plot results of control action modelling
+
+here we will visualizase some result from the model after run the control actions simulation loop
+
+#### plot the number of infected farm considering initial spread + the control actions
+
+The y axis represent the number of infected farms. The x-axis represent the time stept period in days. Color line reprersents the total of infected farms, and farm-specie-related over time. 
+
+ <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206794779-c9ef3010-3e92-40e8-af33-6a5ed874abfe.png" align="center" width="400" ></a>
+
+
+
+
+
+
+
 
 
 
