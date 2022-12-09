@@ -80,8 +80,8 @@ Also we are able to see the geolocation of the infected adn exposed farms:
 ## Control action modelling 
 
 in this scenario we gonna assume that control action will considers: 
-- [ ] Establish control areas
-- [ ] Animal movement restrictions
+- [ ] Establish control areas (infected zone = `3`km, buffer zone = `7`km, and surveillance `15` km)
+- [ ] Animal movement restrictions fo `30` days. 
 - [ ] Depopulate `4` animals per day
 - [ ] Vaccinate `50` farms per day with a vaccination efficacy of 90%
 
