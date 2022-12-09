@@ -18,7 +18,7 @@ events <- MHASpread::events # load the events database
 
 ```
 
-### Silent spread 
+## Silent spread 
 
 In this simulation we are going to consider different parameters for foot-and-mouth disease obtained from real data from Rio Grande do Sul. For the purposes of this workshop we are not going to alter the parameters that involve transmission rates between the different species, incubation period and infectious period.
 
@@ -76,6 +76,16 @@ Also we are able to see the geolocation of the infected adn exposed farms:
  <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="600" ></a>
 
 ---- 
+
+## Control action modelling 
+
+in this scenario we gonna assume that control action will considers: 
+- [ ] Establish control areas
+- [ ] Depopulate `4` animals per day
+- [ ] Vaccinate `50` farms per day with a vaccination efficacy of 90%
+
+### Manage control actions with MHASpread 
+
 
 
 
