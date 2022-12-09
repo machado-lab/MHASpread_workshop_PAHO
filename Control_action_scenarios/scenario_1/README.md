@@ -1,7 +1,7 @@
 
 # Scenario 1 
 
-For the dissemination and control actions, the population and events data will be used. These datasets are synthetic datasets and were created to allow testing of the model. Furthermore, these datasets still preserve the density ratio distribution of the farms, and the events have scale free network properties which are common in animal movement data.
+Here, we describe the population and events data used for dissemination and control actions. The datasets provided are a fair representation of the actual farm density ratio distribution of the farms, in the same way, movement events provided here are close to real between-farm movements.
 
 ### Backgroud 
 
