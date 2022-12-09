@@ -138,20 +138,23 @@ This function will implement daily on-farm vaccination in the simulated populati
 
 ### Plot results of control action modelling
 
-here we will visualizase some result from the model after run the control actions simulation loop
+Here we will visualizase some result from the model after run the control actions simulation loop
 
-#### plot the number of infected farm considering initial spread + the control actions
+#### Plot the number of infected farm considering initial spread + the control actions
 
-The y axis represent the number of infected farms. The x-axis represent the time stept period in days. Color line reprersents the total of infected farms, and farm-specie-related over time. 
+
 
  <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206794779-c9ef3010-3e92-40e8-af33-6a5ed874abfe.png" align="center" width="400" ></a>
 
+The y axis represent the number of infected farms. The x-axis represent the time stept period in days. Color line reprersents the total of infected farms, and farm-specie-related over time. The vertical dahsed line represent when the control ation were placed. 
 
 
+#### Plot the number of depopulated farms during the control actions simulated period 
 
 
+![image](https://user-images.githubusercontent.com/41584216/206796360-e35b80e6-6949-404a-bb8f-00147ad54a17.png)
 
-
+The y axis represent the number of infected farms. The x-axis represent the time stept period in days. the color background reprersents the  farm-specie-related over time.
 
 
 
