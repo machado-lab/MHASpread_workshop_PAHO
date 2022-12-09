@@ -159,7 +159,7 @@ also can be plotted by animals as
 
  <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206796955-099ee072-f12e-4735-ae07-5c70cb3d7137.png" align="center" width="400" ></a>
 
-Here, the y axis represent the number of infected farms. The x-axis represent the time stept period in days. the color line reprersents the number od depulated animals over time.
+Here, the y-axis represent the number of infected farms. The x-axis represent the time stept period in days. the color line reprersents the number od depulated animals over time.
 
 
 
