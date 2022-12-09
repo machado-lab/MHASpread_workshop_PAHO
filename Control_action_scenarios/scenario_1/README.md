@@ -64,7 +64,7 @@ After run this part we can visualize an epidemic curve for each species accordin
 
 <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png" align="center" width="400" ></a>
 
-Also we are able to see the geolocation of the infected adn exposed farms:
+Also we are able to see the geolocation of the infected and the exposed farms:
 
 
 <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206780919-6c4be9c0-89d2-42de-8f25-f23c484b02d1.png" align="center" width="400" ></a>
@@ -133,6 +133,7 @@ Here we are going to take account of the depopulation of farms, for modeling pur
 ````
 #### Vaccination 
 
+This function will implement daily on-farm vaccination in the simulated population. the parameter "limit_per_day_farms" will set the maximum number of farms to be vaccinated per day. The model also allows you to decide if you want to vaccinate infected farms or not "vacc_infectious_farms". Additionally, the parameters `infected_zone`, `buffer_zone`, and `surveillance_zone` will select in which areas the vaccination will be applied. Next, the parameters `vacc_bovine`, `vacc_swine`, and `vacc_small` will help to select in which species can be vaccinated or not. Finally we can set the vaccine efficacy for example 90% efficacy by using `vaccine_efficacy=0.9`
 
 
 
