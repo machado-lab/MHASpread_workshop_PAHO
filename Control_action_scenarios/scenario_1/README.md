@@ -161,5 +161,8 @@ We can also plot this result by the number of infected animals:
 
 Here, the y-axis represents the number of infected farms. The x-axis represents the time step period in days. The colored lines represent the number of depopulated animals over time.
 
+## Wrapping out
+
+
 
 
