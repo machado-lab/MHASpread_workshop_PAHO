@@ -62,18 +62,18 @@ model_1     <- SEIR_model(population = population,                              
 After run this part we can visualize an epidemic curve for each species according to the period of time that was selected.
 
 
-<a href="url"><img src="https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png" align="center" width="600" ></a>
+<a href="url"><img src="https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png" align="center" width="400" ></a>
 
 Also we are able to see the geolocation of the infected adn exposed farms:
 
 
-<a href="url"><img src="https://user-images.githubusercontent.com/41584216/206780919-6c4be9c0-89d2-42de-8f25-f23c484b02d1.png" align="center" width="600" ></a>
+<a href="url"><img src="https://user-images.githubusercontent.com/41584216/206780919-6c4be9c0-89d2-42de-8f25-f23c484b02d1.png" align="center" width="400" ></a>
 
 ---- 
 
  The MHAspread alows to set and crerate specific control actions invervention in especific **Control zones areas** which could be vizualised as well
  
- <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="600" ></a>
+ <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="400" ></a>
 
 ---- 
 
