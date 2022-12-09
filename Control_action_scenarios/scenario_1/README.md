@@ -107,8 +107,21 @@ The following chiunk shows the function in R that encodes this part
 With this function, we will control the movements between farms from infected areas to uninfected regions. The `ban_length` parameter will control the number of days in which the movement of farms will not be allowed, while the `infected_zone`,  `buffer_zone`,  `surveillance_zone` parameters refer to in whichzones  these ban will be applied. Finally, `direct_contacts` and `traceback_length` refer to blocking movement from positive properties and how many steps using the network these actions should be applied. 
 
 
+```r
+  events <- movement_control_ca(population = population,                #  Population database
+                                events = events,                        #  Events database
+                                day = day,                              #  Day of start the control movements
+                                control_zones_db = control_zones_areas, #  Object with the farms in control areas
+                                ban_length = 30,                        #  30 days of movements ban
+                                infected_zone = T,                      #  Animal ban will be applied to infected zone
+                                buffer_zone = T,                        #  Animal ban will be applied to buffer zone
+                                surveillance_zone = T,                  #  Animal ban will be applied to surveillance zone
+                                direct_contacts = T,                    #  Ban farm outside of control zones with contact with positive farms
+                                traceback_length = 1)                   #  Traceback in-going animals movements of infected farms
 
 
+
+```
 
 
 
