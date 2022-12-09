@@ -54,3 +54,6 @@ model_1     <- SEIR_model(population = population,                              
                           lambda2_SR=c(min = 6, mode = 15, max = 20) )                             #  Rate from infectious (I) to recovered (R) in bovine
 
 ```
+After run this part we can visualize an epidemic curve for each species according to the period of time that was selected.
+
+![image](https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png)
