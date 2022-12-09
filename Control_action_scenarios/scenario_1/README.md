@@ -151,12 +151,15 @@ The y axis represent the number of infected farms. The x-axis represent the time
 
 #### Plot the number of depopulated farms during the control actions simulated period 
 
-
-![image](https://user-images.githubusercontent.com/41584216/206796360-e35b80e6-6949-404a-bb8f-00147ad54a17.png)
+ <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206796360-e35b80e6-6949-404a-bb8f-00147ad54a17.png" align="center" width="400" ></a>
 
 The y axis represent the number of infected farms. The x-axis represent the time stept period in days. the color background reprersents the  farm-specie-related over time.
 
+also can be plotted by animals as
 
+ <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206796955-099ee072-f12e-4735-ae07-5c70cb3d7137.png" align="center" width="400" ></a>
+
+Here, the y axis represent the number of infected farms. The x-axis represent the time stept period in days. the color line reprersents the number od depulated animals over time.
 
 
 
