@@ -122,6 +122,22 @@ With this function, we will control the movements between farms from infected ar
 
 
 ```
+#### Depopulation 
+
+Here we are going to take account of the depopulation of farms, for modeling purposes we are going to set the number of farms to be depopulated per by using the parameter `limit_per_day_farms`. Here, the properties will be prioritized according to the following criteria: > cattle population > swine population > small ruminant population. In addition the the parameter `only_depop_infect_farms` allws to depopulate farms in the infected zone as well even if they are not possitive or vaccinated. 
+
+```r
+  depop_result <- depop_farms_ca(population = population,                 #  Population database
+                                 limit_per_day_farms = 10,                  #  10 farm will be depopulated by day
+                                 infected_zone = T,                         #  Depopulation will be applied to infected zone
+                                 farms_in_zones = control_zones_areas,      #  Object with the farms in control areas
+                                 only_depop_infect_farms = T ,
+                                 infected_farms = my_infeted_farms)         #  Id of the farms that have been detected
+
+
+````
+
+
 
 
 
