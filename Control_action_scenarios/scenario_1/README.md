@@ -55,8 +55,15 @@ model_1     <- SEIR_model(population = population,                              
 
 ```
 
-------
+----
 After run this part we can visualize an epidemic curve for each species according to the period of time that was selected.
 
 
 <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png" align="center" width="600" ></a>
+
+Also we are able to see the geolocation of the infected adn exposed farms :
+
+
+<a href="url"><img src="[https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png](https://user-images.githubusercontent.com/41584216/206780566-e25fac0e-3f21-49a3-984f-3dedf8f89ea4.png)" align="center" width="600" ></a>
+
+
