@@ -5,8 +5,8 @@ Here, we describe the population and events data used for dissemination and cont
 
 ### Backgroud 
 
-Infection starts at farm node= `196734` which have a population of `100` animals. 
-Here, foot-and-nouth-disease was first detected `14` days after the inital disease introduction (infection started with `40` infected animal).
+The infection starts at the farm node with ID= `196734` which has a population of `100` animals. 
+Here, FMD was first detected `14` days after the initial disease introduction (infection started with `40` infected animals).
 
 ```r 
 
