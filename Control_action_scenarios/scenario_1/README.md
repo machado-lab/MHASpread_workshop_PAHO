@@ -71,7 +71,7 @@ Also we are able to see the geolocation of the infected adn exposed farms:
 
 ---- 
 
- The MHAspread alows to set and crerate specific control actions invervention in especific **Control zones areas** which could be vizualised as well
+ The MHAspread package alows to set and crerate specific control actions invervention in especific **Control zones areas** which could be vizualised as well
  
  <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="400" ></a>
 
@@ -81,10 +81,28 @@ Also we are able to see the geolocation of the infected adn exposed farms:
 
 in this scenario we gonna assume that control action will considers: 
 - [ ] Establish control areas
+- [ ] Animal movement restrictions
 - [ ] Depopulate `4` animals per day
 - [ ] Vaccinate `50` farms per day with a vaccination efficacy of 90%
 
-### Manage control actions with MHASpread 
+how to Manage control actions with MHASpread:
+
+#### Control zones areas
+
+Control action may vary according to the control area, the radius in **kilomenters** of these can be changed through the parameters `infected_size` `buffer_size` and `surveillance_size`.
+The following chiunk shows the function in R that encodes this part
+
+```r
+
+    control_zones_areas <- assign_control_zones(population = population,                 # Population database
+                                                infected_size = 3,                       # Ratio size in Km of the infected zone
+                                                buffer_size = 7,                         # Ratio size in Km of the buffer zone
+                                                surveillance_size = 15,                  # Ratio size in Km of the surveillance zone
+                                                detected_farms.id = my_infeted_farms,    # farms that have been detected
+                                                num_threads = 10)         # Computer threads to be used (please don't overload your computer)
+```
+
+
 
 
 
