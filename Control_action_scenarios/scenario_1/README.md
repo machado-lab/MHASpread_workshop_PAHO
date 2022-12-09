@@ -118,9 +118,6 @@ With this function, we will control the movements between farms from infected ar
                                 surveillance_zone = T,                  #  Animal ban will be applied to surveillance zone
                                 direct_contacts = T,                    #  Ban farm outside of control zones with contact with positive farms
                                 traceback_length = 1)                   #  Traceback in-going animals movements of infected farms
-
-
-
 ```
 #### Depopulation 
 
