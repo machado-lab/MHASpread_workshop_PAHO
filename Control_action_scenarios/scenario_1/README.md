@@ -102,6 +102,15 @@ The following chiunk shows the function in R that encodes this part
                                                 num_threads = 10)         # Computer threads to be used (please don't overload your computer)
 ```
 
+#### Farm standstill
+
+With this function, we will control the movements between farms from infected areas to uninfected regions. The `ban_length` parameter will control the number of days in which the movement of farms will not be allowed, while the `infected_zone`,  `buffer_zone`,  `surveillance_zone` parameters refer to in whichzones  these ban will be applied. Finally, `direct_contacts` and `traceback_length` refer to blocking movement from positive properties and how many steps using the network these actions should be applied. 
+
+
+
+
+
+
 
 
 
