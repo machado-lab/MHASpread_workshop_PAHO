@@ -1,11 +1,11 @@
-# Scenario 1 
+# Scenario 3 
 
 Here, we describe the population and events data used for dissemination and control actions. The datasets provided are a fair representation of the actual farm density ratio distribution of the farms, in the same way, movement events provided here are close to real between-farm movements.
 
 ### Backgroud 
 
-The infection starts at the farm node with ID= `196734` which has a population of `100` animals. 
-Here, FMD was first detected `14` days after the initial disease introduction (infection started with `40` infected animals).
+The infection starts at the farm node with ID= `286` which has a population of `100` animals. 
+Here, FMD was first detected `10` days after the initial disease introduction (infection started with `40` infected animals).
 
 ```r 
 population <- MHASpread::population  # Get the population data example
