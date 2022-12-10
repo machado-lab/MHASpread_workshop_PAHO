@@ -9,22 +9,20 @@ The infection starts at the farm node with ID= `196734` which has a population o
 Here, FMD was first detected `14` days after the initial disease introduction (infection started with `40` infected animals).
 
 ```r 
-
 population <- MHASpread::population  # Get the population data example
 population$I_bov_pop[population$node== 196734] <- 40    #  # Infected 40 bovine in the farm id = 196734
 
-# select the in and out farm dynamics (movements, births, deaths etc.. )
-events <- MHASpread::events # load the events database
+# select the in and out farm dynamics (movements, births, deaths, etc... )
+events <- MHASpread::events # load the events' database
 
 ```
 
 ## Silent spread 
 
-In this simulation we are going to consider different parameters for foot-and-mouth disease obtained from real data from Rio Grande do Sul. For the purposes of this workshop we are not going to alter the parameters controlling the transmission rates between the different species, incubation period and infectious period.
+In this simulation, we will consider different FMD transmission parameters obtained from actual data from Rio Grande do Sul and from the literature. For this workshop's purposes, we will utilize control intervention used in Brazil. 
 
 
 In the next chunk are the lines to code this first chunk:
-
 
 
 ```r
@@ -54,7 +52,6 @@ model_1     <- SEIR_model(population = population,                              
                           lambda2_SR=c(min = 6, mode = 15, max = 20) )                             #  Rate from infectious (I) to recovered (R) in bovine
 
 ```
-
 
 ----
 
