@@ -6,8 +6,8 @@ Here, we describe the population and events data used for dissemination and cont
 
 ### Backgroud 
 
-The infection starts at the farm node with ID= `196734` which has a population of `100` animals. 
-Here, FMD was first detected `14` days after the initial disease introduction (infection started with `40` infected animals).
+The infection starts at the farm node with ID= `134479` which has a population of `100` animals. 
+Here, FMD was first detected `10` days after the initial disease introduction (infection started with `40` infected animals).
 
 ```r 
 population <- MHASpread::population  # Get the population data example
