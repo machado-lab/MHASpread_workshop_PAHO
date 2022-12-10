@@ -28,7 +28,7 @@ In the next chunk are the lines to code this first chunk:
 model_1     <- SEIR_model(population = population,                                                 #  Population database
                           events = events,                                                         #  Events database
                           simulation_name = "scenario_1_init",                                     #  Simulation tag name
-                          days_of_simulation = 14,                                                 #  Silent spread duration in days
+                          days_of_simulation = 12,                                                 #  Silent spread duration in days
                           initial_day_simulation=1,                                                #  Initial day of simulation
                           max_distance_in_km= 40,                                                  #  Max distance kernel by local disease spread
                           num_threads=1,                                                           #  Number of CPU to parallel tasks; set 1 to not overload your computer
@@ -140,12 +140,12 @@ This function will implement daily on-farm vaccination in the simulated populati
                                         surveillance_zone = F,                         # If true vaccination will be applied to surveillance zone
                                         control_zones_db = control_zones_areas,        # Object with the control areas zones
                                         vacc_bovine = T,                               # If true vaccine bovine population
-                                        vacc_swine = F,                                # If true vaccine swine population
+                                        vacc_swine = T,                                # If true vaccine swine population
                                         vacc_small = T,                                # If true vaccine small ruminants population
                                         vaccine_efficacy =0.9,                         # Efficacy of the vaccine
                                         vaccinated_farms = farms_prev_vaccinated,      # IDs of the farms that have been previously vaccinated
                                         detected_farms = my_infeted_farms,             # Infected farms that have been detected
-                                        num_threads = 10)       # parallel::detectCores()/2 Number of computer threads
+                                        num_threads = 2)       # parallel::detectCores()/2 Number of computer threads
 ```
 
 
@@ -233,9 +233,9 @@ Here, the y-axis represents the number of infected farms. The x-axis represents 
 
 `vacc_bovine = T`
 
-`vacc_swine = F`
+`vacc_swine = T`
 
-`vacc_small = F`
+`vacc_small = T`
 
 `vaccine_efficacy =0.9`
 
