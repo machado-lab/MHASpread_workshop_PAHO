@@ -4,7 +4,7 @@ Here, we describe the population and events data used for dissemination and cont
 
 ### Backgroud 
 
-The infection starts at the farm node with ID= `196734` which has a population of `1` animals. 
+The infection starts at the farm node with ID= `50` which has a population of `1` animals. 
 Here, FMD was first detected `12` days after the initial disease introduction (infection started with `1` infected animals).
 
 ```r 
