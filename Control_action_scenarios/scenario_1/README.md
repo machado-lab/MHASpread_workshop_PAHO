@@ -62,14 +62,14 @@ IM HERE
 
 <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png" align="center" width="400" ></a>
 
-Also we are able to see the geolocation of the infected and the exposed farms:
+Also, we are able to see the geolocation of the infected and the exposed farms:
 
 
 <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206780919-6c4be9c0-89d2-42de-8f25-f23c484b02d1.png" align="center" width="400" ></a>
 
 ---- 
 
- The MHAspread package allows us to create and visualize specific control action interventions in specific **Control zones areas** 
+The MHAspread package allows us to create and visualize specific control action interventions in specific **Control zones areas** 
  
  <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="400" ></a>
 
@@ -77,27 +77,26 @@ Also we are able to see the geolocation of the infected and the exposed farms:
 
 ## Control action modeling 
 
-In this scenario the control actions will include: 
+In this scenario, the control actions will include: 
 - [ ] Establish control areas (infected zone = `3`km, buffer zone = `7`km, and surveillance `15` km)
-- [ ] Animal movement restrictions fo `30` days. 
+- [ ] Animal movement restrictions for `30` days. 
 - [ ] Depopulate `4` animals per day
 - [ ] Vaccinate `50` farms per day with a vaccination efficacy of 90%
 
-How to Manage control actions with MHASpread:
+How to manage control actions with MHASpread:
 
 #### Control zones
 
-Control actions may vary according to the control area; the radius in **kilomenters** of these can be changed through the parameters `infected_size` `buffer_size` and `surveillance_size`.
+Control actions may vary according to the control area; the radius in **kilometers** of these can be changed through the parameters `infected_size` `buffer_size` and `surveillance_size`.
 The following chunk shows the function in R that encodes this part
 
 ```r
-
-    control_zones_areas <- assign_control_zones(population = population,                 # Population database
+control_zones_areas <- assign_control_zones(population = population,                     # Population database
                                                 infected_size = 3,                       # Ratio size in Km of the infected zone
                                                 buffer_size = 7,                         # Ratio size in Km of the buffer zone
                                                 surveillance_size = 15,                  # Ratio size in Km of the surveillance zone
                                                 detected_farms.id = my_infeted_farms,    # farms that have been detected
-                                                num_threads = 10)         # Computer threads to be used (please don't overload your computer)
+                                                num_threads = 10)                        # Computer threads to be used (please don't overload your computer)
 ```
 
 #### Farm standstill
@@ -119,7 +118,7 @@ With this function, we will control the movements between farms from infected ar
 ```
 #### Depopulation 
 
-Here we are going to take account of the depopulation of farms. For modeling purposes we are going to set the maximum number of farms to be depopulated per day by using the parameter `limit_per_day_farms`. Here, the properties will be prioritized according to the following criteria: > cattle population > swine population > small ruminant population. In addition the the parameter `only_depop_infect_farms` allows us to depopulate farms in the infected zone even if they are not positive or vaccinated. 
+Here we are going to take into account of the depopulation of farms. For modeling purposes, we are going to set the maximum number of farms to be depopulated per day by using the parameter `limit_per_day_farms`. Here, the properties will be prioritized according to the following criteria: > cattle population > swine population > small ruminant population. In addition, the parameter `only_depop_infect_farms` allows us to depopulate farms in the infected zone even if they are not positive or vaccinated. 
 
 ```r
   depop_result <- depop_farms_ca(population = population,                 #  Population database
@@ -131,33 +130,32 @@ Here we are going to take account of the depopulation of farms. For modeling pur
 ````
 #### Vaccination 
 
-This function will implement daily on-farm vaccination in the simulated population. The parameter "limit_per_day_farms" will set the maximum number of farms to be vaccinated per day. The model also allows you to decide if you want to vaccinate infected farms or not through the parameter "vacc_infectious_farms". Additionally, the parameters `infected_zone`, `buffer_zone`, and `surveillance_zone` will select the areas in which the vaccination will be applied. Next, the parameters `vacc_bovine`, `vacc_swine`, and `vacc_small` will help to select the species that can be vaccinated. Finally we can set the vaccine efficacy via the `vaccine_efficacy` parameter; for example 90% efficacy would be represented by `vaccine_efficacy=0.9`
+This function will implement daily on-farm vaccination in the simulated population. The parameter "limit_per_day_farms" will set the maximum number of farms to be vaccinated per day. The model also allows you to decide if you want to vaccinate infected farms or not through the parameter "vacc_infectious_farms". Additionally, the parameters `infected_zone`, `buffer_zone`, and `surveillance_zone` will select the areas in which the vaccination will be applied. Next, the parameters `vacc_bovine`, `vacc_swine`, and `vacc_small` will help to select the species that can be vaccinated. Finally,, we can set the vaccine efficacy via the `vaccine_efficacy` parameter; for example, 90% efficacy would be represented by `vaccine_efficacy=0.9`
 
 
 ### Plot results of control action modelling
 
-Here we will visualizase some results from the model after running the control actions in our simulations.
+Here, we will visualize some results from the model after running the control actions in our simulations.
 
 #### Plot the number of infected farm considering initial spread + the control actions
 
+<a href="url"><img src="https://user-images.githubusercontent.com/41584216/206794779-c9ef3010-3e92-40e8-af33-6a5ed874abfe.png" align="center" width="400" ></a>
 
-
- <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206794779-c9ef3010-3e92-40e8-af33-6a5ed874abfe.png" align="center" width="400" ></a>
-
-The y axis represents the number of infected farms. The x-axis represents the time step period in days. The colored lines represent the total of infected farms, and farms-by-species over time. The vertical dashed line represents when the control action were placed. 
+The y-axis represents the number of infected farms. The x-axis represents the time step period in days. The colored lines represent the total of infected farms, and farms-by-species over time. The vertical dashed line represents when the control action were placed. 
 
 
 #### Plot the number of depopulated farms during the control actions simulated period 
 
- <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206796360-e35b80e6-6949-404a-bb8f-00147ad54a17.png" align="center" width="400" ></a>
+<a href="url"><img src="https://user-images.githubusercontent.com/41584216/206796360-e35b80e6-6949-404a-bb8f-00147ad54a17.png" align="center" width="400" ></a>
 
-The y axis represents the number of infected farms. The x-axis represents the time step period in days. The colored backgrounds represent the infected farms-by-species over time.
+The y-axis represents the number of infected farms. The x-axis represents the time step period in days. The colored backgrounds represent the infected farms-by-species over time.
 
 We can also plot this result by the number of infected animals:
 
  <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206796955-099ee072-f12e-4735-ae07-5c70cb3d7137.png" align="center" width="400" ></a>
 
 Here, the y-axis represents the number of infected farms. The x-axis represents the time step period in days. The colored lines represent the number of depopulated animals over time.
+
 
 ## Wrapping out
 
