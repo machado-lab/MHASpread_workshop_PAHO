@@ -29,7 +29,7 @@ In the next chunk are the lines to code this first chunk:
 model_1     <- SEIR_model(population = population,                                                 #  Population database
                           events = events,                                                         #  Events database
                           simulation_name = "scenario_1_init",                                     #  Simulation tag name
-                          days_of_simulation = 14,                                                 #  Population database
+                          days_of_simulation = 14,                                                 #  Silent spread duration in days
                           initial_day_simulation=1,                                                #  Initial day of simulation
                           max_distance_in_km= 40,                                                  #  Max distance kernel by local disease spread
                           num_threads=1,                                                           #  Number of CPU to parallel tasks; set 1 to not overload your computer
@@ -55,9 +55,10 @@ model_1     <- SEIR_model(population = population,                              
 
 ----
 
+After running this part, we can visualize an epidemic curve for each species according to the number of days selected for silent dissemination.
 
-After running this part we can visualize an epidemic curve for each species according to the period of time that was selected.
 
+IM HERE
 
 <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png" align="center" width="400" ></a>
 
