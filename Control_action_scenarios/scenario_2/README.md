@@ -4,12 +4,12 @@ Here, we describe the population and events data used for dissemination and cont
 
 ### Backgroud 
 
-The infection starts at the farm node with ID= `196734` which has a population of `100` animals. 
-Here, FMD was first detected `14` days after the initial disease introduction (infection started with `40` infected animals).
+The infection starts at the farm node with ID= `196734` which has a population of `1` animals. 
+Here, FMD was first detected `12` days after the initial disease introduction (infection started with `1` infected animals).
 
 ```r 
 population <- MHASpread::population  # Get the population data example
-population$I_bov_pop[population$node== 196734] <- 40    #  # Infected 40 bovine in the farm id = 196734
+population$I_swi_pop[population$node== 50] <- 1  # infect 1 swine at the farm 50
 
 # select the in and out farm dynamics (movements, births, deaths, etc... )
 events <- MHASpread::events # load the events' database
@@ -131,6 +131,26 @@ Here we are going to take into account of the depopulation of farms. For modelin
 
 This function will implement daily on-farm vaccination in the simulated population. The parameter "limit_per_day_farms" will set the maximum number of farms to be vaccinated per day. The model also allows you to decide if you want to vaccinate infected farms or not through the parameter "vacc_infectious_farms". Additionally, the parameters `infected_zone`, `buffer_zone`, and `surveillance_zone` will select the areas in which the vaccination will be applied. Next, the parameters `vacc_bovine`, `vacc_swine`, and `vacc_small` will help to select the species that can be vaccinated. Finally,, we can set the vaccine efficacy via the `vaccine_efficacy` parameter; for example, 90% efficacy would be represented by `vaccine_efficacy=0.9`
 
+```r
+  output_vacc_pop <- vaccinate_farms_ca(population = population,                       # Population database
+                                        limit_per_day_farms = 100,                     # Maximum number of farms to be vaccinated
+                                        infected_zone = T,                             # If true vaccination will be applied to infected zone
+                                        vacc_infectious_farms = T,                     # If true vaccination will be applied to infected farms
+                                        buffer_zone = T,                               # If true vaccination will be applied to buffer zone
+                                        surveillance_zone = F,                         # If true vaccination will be applied to surveillance zone
+                                        control_zones_db = control_zones_areas,        # Object with the control areas zones
+                                        vacc_bovine = T,                               # If true vaccine bovine population
+                                        vacc_swine = F,                                # If true vaccine swine population
+                                        vacc_small = T,                                # If true vaccine small ruminants population
+                                        vaccine_efficacy =0.9,                         # Efficacy of the vaccine
+                                        vaccinated_farms = farms_prev_vaccinated,      # IDs of the farms that have been previously vaccinated
+                                        detected_farms = my_infeted_farms,             # Infected farms that have been detected
+                                        num_threads = 10)       # parallel::detectCores()/2 Number of computer threads
+```
+
+
+
+
 
 ### Plot results of control action modelling
 
@@ -160,7 +180,7 @@ Here, the y-axis represents the number of infected farms. The x-axis represents 
 
 ### initial infected premises with the initial number of infectious animals
 
-`population$I_bov_pop[population$node== 196734] <- 40`
+`population$I_swi_pop[population$node== 50] <- 1`
 
 ### Initial day of simulation
 
@@ -168,7 +188,7 @@ Here, the y-axis represents the number of infected farms. The x-axis represents 
 
 ### Number of days of silent spread
 
-`days_of_simulation = 14`
+`days_of_simulation = 12`
 
 ### Control zones sizes
 
@@ -193,7 +213,7 @@ Here, the y-axis represents the number of infected farms. The x-axis represents 
 
 `limit_per_day_farms`
 
-`limit_per_day_farms = 4` 
+`limit_per_day_farms = 10` 
 
 `infected_zone = T`
 
@@ -201,7 +221,7 @@ Here, the y-axis represents the number of infected farms. The x-axis represents 
 
 ### Vaccination
 
-`limit_per_day_farms = 50`
+`limit_per_day_farms = 100`
 
 `infected_zone = T`
 
