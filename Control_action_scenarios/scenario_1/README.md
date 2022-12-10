@@ -179,7 +179,7 @@ Here, the y-axis represents the number of infected farms. The x-axis represents 
 
 ### initial infected premises with the initial number of infectious animals
 
-`population$I_bov_pop[population$node== 196734] <- 40`
+`population$I_bov_pop[population$node== 50] <- 1`
 
 ### Initial day of simulation
 
@@ -187,7 +187,7 @@ Here, the y-axis represents the number of infected farms. The x-axis represents 
 
 ### Number of days of silent spread
 
-`days_of_simulation = 14`
+`days_of_simulation = 12`
 
 ### Control zones sizes
 
@@ -232,9 +232,9 @@ Here, the y-axis represents the number of infected farms. The x-axis represents 
 
 `vacc_bovine = T`
 
-`vacc_swine = F`
+`vacc_swine = T`
 
-`vacc_small = F`
+`vacc_small = T`
 
 `vaccine_efficacy =0.9`
 
