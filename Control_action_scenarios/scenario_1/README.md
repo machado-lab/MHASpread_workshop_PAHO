@@ -58,7 +58,7 @@ model_1     <- SEIR_model(population = population,                              
 After running this part, we can visualize an epidemic curve for each species according to the number of days selected for silent dissemination.
 
 
-IM HERE
+
 
 <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png" align="center" width="400" ></a>
 
@@ -131,6 +131,24 @@ Here we are going to take into account of the depopulation of farms. For modelin
 #### Vaccination 
 
 This function will implement daily on-farm vaccination in the simulated population. The parameter "limit_per_day_farms" will set the maximum number of farms to be vaccinated per day. The model also allows you to decide if you want to vaccinate infected farms or not through the parameter "vacc_infectious_farms". Additionally, the parameters `infected_zone`, `buffer_zone`, and `surveillance_zone` will select the areas in which the vaccination will be applied. Next, the parameters `vacc_bovine`, `vacc_swine`, and `vacc_small` will help to select the species that can be vaccinated. Finally,, we can set the vaccine efficacy via the `vaccine_efficacy` parameter; for example, 90% efficacy would be represented by `vaccine_efficacy=0.9`
+
+```r
+  output_vacc_pop <- vaccinate_farms_ca(population = population,                       # Population database
+                                        limit_per_day_farms = 50,                     # Maximum number of farms to be vaccinated
+                                        infected_zone = T,                             # If true vaccination will be applied to infected zone
+                                        vacc_infectious_farms = T,                     # If true vaccination will be applied to infected farms
+                                        buffer_zone = T,                               # If true vaccination will be applied to buffer zone
+                                        surveillance_zone = F,                         # If true vaccination will be applied to surveillance zone
+                                        control_zones_db = control_zones_areas,        # Object with the control areas zones
+                                        vacc_bovine = T,                               # If true vaccine bovine population
+                                        vacc_swine = F,                                # If true vaccine swine population
+                                        vacc_small = F,                                # If true vaccine small ruminants population
+                                        vaccine_efficacy =0.9,                         # Efficacy of the vaccine
+                                        vaccinated_farms = farms_prev_vaccinated,      # IDs of the farms that have been previously vaccinated
+                                        detected_farms = my_infeted_farms,             # Infected farms that have been detected
+                                        num_threads = 2)       # Number of computer threads
+
+```
 
 
 ### Plot results of control action modelling
