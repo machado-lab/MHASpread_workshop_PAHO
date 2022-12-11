@@ -1,3 +1,3 @@
 # Dissemination and control scenarios
 
-### inside each folder above are rporpised four scenarios to run the model 
+### Each folder contain one model scenario.
