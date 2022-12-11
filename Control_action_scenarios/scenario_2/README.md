@@ -1,4 +1,4 @@
-# Scenario 2 
+# Scenario 2 (swine)
 
 Here, we describe the population and events data used for dissemination and control actions. The datasets provided are a fair representation of the actual farm density ratio distribution of the farms, in the same way, movement events provided here are close to real between-farm movements.
 
