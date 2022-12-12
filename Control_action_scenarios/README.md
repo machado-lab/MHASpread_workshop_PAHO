@@ -1,5 +1,6 @@
-For each group you have received one contol scenario. In addition, your team will simulate two alternative ones. The **three scenarios** will be presented to the group day 3.
-# Dissemination and control scenarios
+## Dissemination and control scenarios
+
+Each group received one contol scenario. In addition, your team will simulate two alternative scenarios. The **three scenarios** will be presented to the larger group on day 3.
 
 ### Each folder contain one model scenario.
 1. Group 1 will utilize cattle as initial infection (Johanna Elizabeth Salas Torres; Eglinton Ruben Villacaqui Ayllon; Bruno Marinho De Carvalho)
