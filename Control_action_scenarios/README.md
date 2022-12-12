@@ -1,4 +1,4 @@
-For each group you have received one contol scenario. In addition, your team will simulate two alternative ones. The three scenarios will be presented to the group day 3.
+For each group you have received one contol scenario. In addition, your team will simulate two alternative ones. The **three scenarios** will be presented to the group day 3.
 # Dissemination and control scenarios
 
 ### Each folder contain one model scenario.
