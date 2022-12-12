@@ -49,7 +49,7 @@ The `events` database is a data frame object where each line represents a moveme
 | **event\_type** | Represents the type of the event where: <br /> **1**: movements farm to farm; <br /> **2**: movements to slaughterhouses; <br /> **3**: births of animals; <br /> **4** deaths of the animals |
 | **from**        | ID of the origin farm/premise                                                                                                                               |
 | **to**          | ID of the destination farm/premise                                                                                                                         |
-| **host**        | Host species being moved |
+| **host**        | Host species being moved must be one of the following options:<br /> **Bovine**;<br />**Swine**;<br />**Small ruminants** |
 | **number**      | The number of animals related to the event                                                                                                      |
 
 
