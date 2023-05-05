@@ -31,5 +31,6 @@ if (!require(leaflet.extras)){install.packages("leaflet.extras") };library(leafl
 if (!require(reshape2)){install.packages("reshape2") };library(reshape2) 
 if (!require(mapview)){install.packages("mapview") };library(mapview) 
 if (!require(taskscheduleR)){install.packages("taskscheduleR") };library(taskscheduleR) 
+if (!require(data.table)){install.packages("data.table") };library(data.table) 
 
 
