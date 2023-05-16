@@ -1,8 +1,7 @@
-
 #===========================================================#
-#       List of packages required by MHASpread              #
+# set up all the necessary package for the model
 #===========================================================#
-# the next lines require the package adn if is not pre-installed trigger the instalation request
+# the next lines require the package and if is not pre-installed trigger the installation request
 
 if (!require(doParallel)){install.packages("doParallel") };library(doParallel)
 if (!require(magrittr)){install.packages("magrittr") };library(magrittr)
@@ -32,7 +31,7 @@ if (!require(reshape2)){install.packages("reshape2") };library(reshape2)
 if (!require(mapview)){install.packages("mapview") };library(mapview) 
 if (!require(taskscheduleR)){install.packages("taskscheduleR") };library(taskscheduleR) 
 if (!require(data.table)){install.packages("data.table") };library(data.table)
-# python libraries 
+# add py 3 with python libraries 
 if (!require(reticulate)){install.packages("reticulate") };library(reticulate) 
 reticulate::install_miniconda()
 reticulate::py_install("pandas")
