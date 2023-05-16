@@ -30,9 +30,9 @@ if (!require(reshape2)){install.packages("reshape2") };library(reshape2)
 if (!require(mapview)){install.packages("mapview") };library(mapview)
 if (!require(data.table)){install.packages("data.table") };library(data.table)
 if (!require(remotes)){install.packages("remotes") };library(remotes)
-if (webshot::is_phantomjs_installed()==F) {  # additional software to screen shot
-  webshot::install_phantomjs()
-}
+if (!require(devtools)){install.packages("devtools") };library(devtools)
+if (!require(emo)){devtools::install_github("hadley/emo")};library(emo)
+
 # add py 3 with python libraries
 if (!require(reticulate)){install.packages("reticulate") };library(reticulate)
 reticulate::install_miniconda()
