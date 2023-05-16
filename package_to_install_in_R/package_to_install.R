@@ -26,17 +26,13 @@ if (!require(sf)){install.packages("sf") };library(sf)
 if (!require(cowsay)){install.packages("cowsay") };library(cowsay)
 if (!require(fastmatch)){install.packages("fastmatch") };library(fastmatch)
 if (!require(leaflet.extras)){install.packages("leaflet.extras") };library(leaflet.extras)
-if (!require(leaflet.extras)){install.packages("leaflet.extras") };library(leaflet.extras)
 if (!require(reshape2)){install.packages("reshape2") };library(reshape2)
 if (!require(mapview)){install.packages("mapview") };library(mapview)
-if (!require(taskscheduleR)){install.packages("taskscheduleR") };library(taskscheduleR)
 if (!require(data.table)){install.packages("data.table") };library(data.table)
 if (!require(remotes)){install.packages("remotes") };library(remotes)
 # add py 3 with python libraries
 if (!require(reticulate)){install.packages("reticulate") };library(reticulate)
 reticulate::install_miniconda()
 reticulate::py_install("pandas")
-
-
 
 
