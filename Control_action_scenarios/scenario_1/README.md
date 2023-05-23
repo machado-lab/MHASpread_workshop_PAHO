@@ -143,6 +143,55 @@ to take a snapshot use:
 ```r
 mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
 ```
+the next large function has a bunch of arguments that control different *control actions* in the simulations to be performed. Then, the next paragraph will explain how to set those arguments *argument by argument* in the function:
+
+```r
+control_model <- control_actions(
+  # MODEL SETUP
+  num_threads = 4,                           # Number of CPUs
+  model_output = model_output,               # Output object of the function stochastic_SEIR()
+  population_data = MHASpread::population,   # Naive population  before the simulations
+  events = MHASpread::events,                # Initial Scheduled movements
+  break_sim_if = 50,                         # Breaks the simulation if there ar more than n infectious farms
+
+  # INITIAL CONDITION OF THE CONTROL ACTIONS
+  days_of_control_action = 20,               # Number of days to be working on control actions
+  detectection_rate = 50,                    # Detection rate per day (in percentage % (0%-100%))
+  only_infected_comp = T,                    # If True will detect only animal in the infectious compartment
+
+  # CONTROL ZONES AREAS SETUP
+  freq_updt_cntrl_zns = 7,                   # How often the control zones will be update i.e. 1, 7, 15 days
+  infected_size_cz = 3,                      # Ratio size in Km of the infected zone
+  buffer_size_cz = 7,                        # Ratio size in Km of the buffer zone
+  surveillance_size_cz = 15,                 # Ratio size in Km of the surveillance zone
+
+  # ANIMAL MOVEMENTS STANDSTILL SETUP
+  ban_length = 30,                           #  30 days of movements ban
+  infected_zone_mov = T,                     #  Animal ban will be applied to infected zone
+  buffer_zone_mov = T,                       #  Animal ban will be applied to buffer zone
+  surveillance_zone_mov = T,                 #  Animal ban will be applied to surveillance zone
+  direct_contacts_mov = T,                   #  Ban farm outside of control zones with contact with positive farms
+  traceback_length_mov = 1,                  #  Traceback in-going animals movements of infected farms
+
+  # DEPOPULATION SETUP
+  limit_per_day_farms_dep = 4,               #  Farm will be depopulated by day
+  infected_zone_dep = T,                     #  Depopulation will be applied to infected zone
+  only_depop_infect_farms = T,               #  If False stamping out all farms in the infected zone
+
+  # VACCINATION SETUP
+  days_to_get_inmunity = 15,                 # How many days to be considered 100% immune
+  limit_per_day_farms = 25,                  # Maximum number of farms to be vaccinated in BUFFER area
+  limit_per_day_farms_infct = 25,            # Maximum number of farms to be vaccinated in INFECTED area
+  vacc_eff = 0.7,                            # Numeric value between 0 and 1 indicating the efficacy of the vaccine
+  dt = 1/15,                                 # Rate of conversion to SEIR -> V compartment i.e 1/15
+  vacc_swine = T,                            # If true vaccine swine
+  vacc_bovine = T,                           # If true vaccine bovine
+  vacc_small = T,                            # If true vaccine small ruminants
+  infected_zone_vac =T ,                     # If true vaccine over infected control zone area
+  buffer_zone_vac = T,                       # If true vaccine over buffer control zone area
+  vacc_infectious_farms =   T,               # If true infectious farms will be vaccinated
+  vacc_delay = 5)                            # How many days until start the vaccination
+  ```
 
 
 
