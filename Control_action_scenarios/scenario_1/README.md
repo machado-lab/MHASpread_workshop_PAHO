@@ -61,8 +61,11 @@ model_output <- stochastic_SEIR(number_of_simulation = 1,
 
 ----
 
-### Initial spread epidemic curves of farms 
+## Initial spread disease description
 After running this part, we can visualize an epidemic curve for each species according to the number of days selected for silent dissemination.
+
+###  Initial spread epidemic curves of farms  
+
 
 *  Plot farms infected curves considering all species
 ```r
@@ -81,7 +84,21 @@ plot_infected_farms_curve(model_output = model_output, host = "Swine")
 plot_infected_farms_curve(model_output = model_output, host = "Small ruminants")
 ```
 
+###  Initial spread epidemic curves of animals  
 
+* Plot  animal infected curves considering all species
+```r
+plot_SEIR_animals(model_output = model_output,
+                  plot_suceptible_compartment = F,
+                  by_host = F)
+```
+
+* Plot  animal infected curves considering by species
+```r
+plot_SEIR_animals(model_output = model_output,
+                  plot_suceptible_compartment = F,
+                  by_host = T)
+```
 
 
 
