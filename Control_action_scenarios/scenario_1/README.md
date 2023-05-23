@@ -3,7 +3,7 @@
 
 Here, we describe the population and events data used for dissemination and control actions. The datasets provided are a fair representation of the actual farm density ratio distribution of the farms, in the same way, movement events provided here are similar to real between-farm movement network.
 
-### Backgroud 
+## Backgroud 
 
 The infection starts at the farm node with ID= `196734` which has a population of `100` animals. 
 Here, FMD was first detected `14` days after the initial disease introduction (infection started with `40` infected animals).
@@ -61,10 +61,31 @@ model_output <- stochastic_SEIR(number_of_simulation = 1,
 
 ----
 
+### Initial spread epidemic curves of farms 
 After running this part, we can visualize an epidemic curve for each species according to the number of days selected for silent dissemination.
 
+*  Plot farms infected curves considering all species
+```r
+plot_infected_farms_curve(model_output = model_output, host = "All host")
+```
+*  Plot farms infected curves considering bovine species
+```r
+plot_infected_farms_curve(model_output = model_output, host = "Bovine")
+```
+*  Plot farms infected curves considering swine species
+```r
+plot_infected_farms_curve(model_output = model_output, host = "Swine")
+```
+*  Plot farms infected curves considering small ruminants species
+```r
+plot_infected_farms_curve(model_output = model_output, host = "Small ruminants")
+```
 
 
+
+
+
+# lixoo nao sei  ----- 
 
 <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png" align="center" width="400" ></a>
 
