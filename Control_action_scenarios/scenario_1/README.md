@@ -20,36 +20,40 @@ events <- MHASpread::events # load the events' database
 ## Silent spread 
 
 In this simulation, we will consider different FMD transmission parameters obtained from actual data from Rio Grande do Sul and from the literature. For this workshop's purposes, we will utilize control intervention used in Brazil. 
+**Note:** Please, consider that this model is stochastic which means that several runs are required to get a proper description of the inputs to be simulated. To increase the performance of those simulations this model runs in different CPU threads. Therefore, the number of threads must be selected according to the computer's capacity, **_DO NOT OVERLOAD_** your computer. 
 
 
-In the next chunk are the lines to code this first chunk:
+In the next box chunck respresent the code lines that you have to riun in Rstudio:
 
 
 ```r
-model_1     <- SEIR_model(population = population,                                                 #  Population database
-                          events = events,                                                         #  Events database
-                          simulation_name = "scenario_1_init",                                     #  Simulation tag name
-                          days_of_simulation = 14,                                                 #  Silent spread duration in days
-                          initial_day_simulation=1,                                                #  Initial day of simulation
-                          max_distance_in_km= 40,                                                  #  Max distance kernel by local disease spread
-                          num_threads=1,                                                           #  Number of CPU to parallel tasks; set 1 to not overload your computer
-                          a = 0.012,                                                               #  To set kernel curve max infection rate (S*I)/N when animals are in the same area
-                          b =  0.6 ,                                                               #  Shape of the kernel curve
-                          beta_bov_to_bov= c(min = 0.01833333, mode = 0.025, max = 0.05666667),    #  Transmission coefficient of bovine infects bovine
-                          beta_bov_to_swi= c(min = 0.01833333, mode = 0.025, max = 0.05666667),    #  Transmission coefficient of bovine infects swine
-                          beta_bov_to_SR=c(min = 0.012, mode = 0.031, max = 0.065),                #  Transmission coefficient of bovine infects small ruminants
-                          lambda1_bov=c(min = 3, mode = 5.9, max = 16),                            #  Rate from exposed (E) to infectious (I) in bovine
-                          lambda2_bov=c(min = 6, mode = 15, max = 20),                             #  Rate from infectious (I) to recovered (R) in bovine
-                          beta_swi_to_swi=c(min = 0.044, mode = 0.14, max = 0.33) ,                #  Transmission coefficient of swine infects swine
-                          beta_swi_to_bov=c(min = 0.014, mode = 0.33, max = 0.044) ,               #  Transmission coefficient of swine infects bovine
-                          beta_swi_to_SR= c(min = 0.014, mode = 0.33, max = 0.044),                #  Transmission coefficient of swine infects small ruminants
-                          lambda1_swi=c(min = 3, mode = 5.9, max = 16),                            #  Rate from exposed (E) to infectious (I) in swine
-                          lambda2_swi=c(min = 5, mode = 6.44, max = 14) ,                          #  Rate from infectious (I) to recovered (R) in swine
-                          beta_SR_to_SR=c(min = 0.16, mode = 0.24, max = 0.5) ,                    #  Transmission coefficient of small ruminants infects small ruminants
-                          beta_SR_to_bov=c(min=0.012,mode=0.031,max= 0.033) ,                      #  Transmission coefficient of small ruminants infects bovine
-                          beta_SR_to_swi=c(min = 0.006, mode = 0.024, max = 0.09),                 #  Transmission coefficient of small ruminants infects swine
-                          lambda1_SR=c(min = 4, mode = 5, max = 14) ,                              #  Rate from exposed (E) to infectious (I) in small ruminants
-                          lambda2_SR=c(min = 6, mode = 15, max = 20) )                             #  Rate from infectious (I) to recovered (R) in bovine
+model_output <- stochastic_SEIR(number_of_simulation = 1,
+                                number_of_threads = 1, #parallel::detectCores()-1,
+                                population = population,                                                 #  Population database
+                                events = events,                                                         #  Events database
+                                simulation_name = "scenario_1_init",                                     #  Simulation tag name
+                                days_of_simulation = 7,                                                 #  Population database
+                                initial_day_simulation=1,                                                #  Initial day of simulation
+                                max_distance_in_km= 40,                                                  #  Max distance kernel by local disease spread
+                                num_threads=1,                                                           #  Number of CPU to parallel tasks; set 1 to not overload your computer
+                                a = 0.012,                                                               #  To set kernel curve max infection rate (S*I)/N when animals are in the same area
+                                b =  0.6 ,                                                               #  Shape of the kernel curve
+                                beta_bov_to_bov= c(min = 0.01833333, mode = 0.025, max = 0.05666667),    #  Transmission coefficient of bovine infects bovine
+                                beta_bov_to_swi= c(min = 0.01833333, mode = 0.025, max = 0.05666667),    #  Transmission coefficient of bovine infects swine
+                                beta_bov_to_SR=c(min = 0.012, mode = 0.031, max = 0.065),                #  Transmission coefficient of bovine infects small ruminants
+                                lambda1_bov=c(min = 3, mode = 5.9, max = 16),                            #  Rate from exposed (E) to infectious (I) in bovine
+                                lambda2_bov=c(min = 6, mode = 15, max = 20),                             #  Rate from infectious (I) to recovered (R) in bovine
+                                beta_swi_to_swi=c(min = 0.044, mode = 0.14, max = 0.33) ,                #  Transmission coefficient of swine infects swine
+                                beta_swi_to_bov=c(min = 0.014, mode = 0.033, max = 0.044) ,               #  Transmission coefficient of swine infects bovine
+                                beta_swi_to_SR= c(min = 0.014, mode = 0.033, max = 0.044),                #  Transmission coefficient of swine infects small ruminants
+                                lambda1_swi=c(min = 3, mode = 5.9, max = 16),                            #  Rate from exposed (E) to infectious (I) in swine
+                                lambda2_swi=c(min = 5, mode = 6.44, max = 14) ,                          #  Rate from infectious (I) to recovered (R) in swine
+                                beta_SR_to_SR=c(min = 0.16, mode = 0.24, max = 0.5) ,                    #  Transmission coefficient of small ruminants infects small ruminants
+                                beta_SR_to_bov=c(min=0.012,mode=0.031,max= 0.033) ,                      #  Transmission coefficient of small ruminants infects bovine
+                                beta_SR_to_swi=c(min = 0.006, mode = 0.024, max = 0.09),                 #  Transmission coefficient of small ruminants infects swine
+                                lambda1_SR=c(min = 4, mode = 5, max = 14) ,                              #  Rate from exposed (E) to infectious (I) in small ruminants
+                                lambda2_SR=c(min = 6, mode = 15, max = 20))
+
 
 ```
 
