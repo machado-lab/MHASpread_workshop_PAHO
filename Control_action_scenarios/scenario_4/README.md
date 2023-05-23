@@ -1,7 +1,7 @@
 
 
 # Scenario 4 (cattle and small ruminants, initial infection in cattle)
-# Scenario 1 (cattle)
+
 
 Here, we describe the population and events data used for dissemination and control actions. The datasets provided are a fair representation of the actual farm density ratio distribution of the farms, in the same way, movement events provided here are similar to real between-farm movement network.
 
