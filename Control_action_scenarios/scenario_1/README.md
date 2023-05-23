@@ -107,8 +107,10 @@ in the background, the color bins represent the kernel density of the farm locat
 farms_location <-plot_nodes_kernel_map(model_output = model_output, population = population)
 farms_location
 ```
-
-
+Is possible to take a snapshot of the map by using the next line 
+```r
+mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
+```
 
 # lixoo nao sei  ----- 
 
