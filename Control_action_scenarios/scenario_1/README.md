@@ -112,6 +112,18 @@ Is possible to take a snapshot of the map by using the next line
 mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
 ```
 
+# How control action simulations works
+
+The simulation of the control actions works using the output of the initial spread (when any control actions were applied) as a starting point to continue with the SEIR dynamics however considering specific control action. Here, all control actions are placed according to specific control areas zones: infected, buffer, and surveillance zones respectively. Let's check out how these control zones looks like by selecting one on the previous simulation runs as an example of the spatial distribution.
+
+
+
+
+
+
+
+
+
 # lixoo nao sei  ----- 
 
 <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206779480-609f2c26-847e-4aa3-9f77-70e1ac278373.png" align="center" width="400" ></a>
