@@ -20,6 +20,8 @@ events <- MHASpread::events # load the events' database
 ## Silent spread 
 
 In this simulation, we will consider different FMD transmission parameters obtained from actual data from Rio Grande do Sul and from the literature. For this workshop's purposes, we will utilize control intervention used in Brazil. 
+
+
 **Note:** Please, consider that this model is stochastic which means that several runs are required to get a proper description of the inputs to be simulated. To increase the performance of those simulations this model runs in different CPU threads. Therefore, the number of threads must be selected according to the computer's capacity, **_DO NOT OVERLOAD_** your computer. 
 
 
