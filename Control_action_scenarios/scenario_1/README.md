@@ -247,4 +247,45 @@ This function will implement daily on-farm vaccination in the simulated populati
 - [ ] `vacc_infectious_farms` Is a TRUE or FALSE statement, if TRUE infectious farms will be vaccinated.
 - [ ] `vacc_delay` Will set how many days to prepare to vaccinate and  start to vaccinate animals. 
 
+# Plot results of control action modelling
+
+Here, we will visualize some results from the model after running the control actions in our simulations.
+
+#### Plot the number of infected farm considering initial spread + the control actions
+Lets see the results of the control actions when considering all farms types
+```r
+plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
+                                  model_control = control_output,
+                                  control_action_start_day = 11,
+                                  plot_only_total_farms = T)
+```
+this function should produce a plot like this:
+<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/98dc45a5-d322-42fb-b485-4f07adee9ad1" align="center" width="400" ></a>
+The y-axis represents the number of infected farms. The x-axis represents the time step period in days. 
+
+Now, Lets see the results of the control actions by each farms types
+
+
+<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/132366a0-53de-490a-a5ad-8000a1aad356" align="center" width="400" ></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### Plot the number of depopulated farms during the control actions simulated period 
+
+<a href="url"><img src="https://user-images.githubusercontent.com/41584216/206796360-e35b80e6-6949-404a-bb8f-00147ad54a17.png" align="center" width="400" ></a>
+
+The y-axis represents the number of infected farms. The x-axis represents the time step period in days. The colored backgrounds represent the infected farms-by-species over time.
+
+We can also plot this result by the number of infected animals:
+
 
