@@ -234,17 +234,17 @@ Here we are going to take into account the depopulation of farms. 
 #### Vaccination setup 
 This function will implement daily on-farm vaccination in the simulated population.
 
-- [ ] `days_to_get_inmunity` numeric valuer that describes the number of days in which a population will be 100% immunized
-- [ ] `limit_per_day_farms` Numeric value that will set the maximum number of farms to be vaccinated per day in BUFFER area
-- [ ] `limit_per_day_farms_infct` numeric value that will set the maximum number of farms to be vaccinated per day in INFECTED area
-- [ ] `vacc_eff` = Is a numeric value between 0 and 1 indicating the efficacy of the vaccine
-- [ ] `dt` = is a rate of conversion to SEIR population  to a vaccinated  compartment i.e 1/15
-- [ ] `vacc_swine` Is a TRUE or FALSE statement, if TRUE  will vaccine swine
-- [ ] `vacc_bovine`Is a TRUE or FALSE statement, if TRUE will vaccine bovine
-- [ ] `vacc_small ` Is a TRUE or FALSE statement, if TRUE will vaccine small-ruminants
-- [ ] `infected_zone_vac`Is a TRUE or FALSE statement, if TRUE will  vaccine over the infected control zone area
-- [ ] `buffer_zone_vac`Is a TRUE or FALSE statement, if TRUE will vaccine over buffer control zone area
-- [ ] `vacc_infectious_farms` Is a TRUE or FALSE statement, if TRUE infectious farms will be vaccinated
-- [ ] `vacc_delay`= 5 will set how many days to prepare to vaccinate and  start to vaccinate animals 
+- [ ] `days_to_get_inmunity` Numeric valuer that describes the number of days in which a population will be 100% immunized.
+- [ ] `limit_per_day_farms` Numeric value that will set the maximum number of farms to be vaccinated per day in BUFFER area.
+- [ ] `limit_per_day_farms_infct` Numeric value that will set the maximum number of farms to be vaccinated per day in INFECTED area.
+- [ ] `vacc_eff` = Is a numeric value between 0 and 1 indicating the efficacy of the vaccine.
+- [ ] `dt` = is a rate of conversion to SEIR population  to a vaccinated  compartment i.e 1/15.
+- [ ] `vacc_swine` Is a TRUE or FALSE statement, if TRUE  will vaccine swine.
+- [ ] `vacc_bovine`Is a TRUE or FALSE statement, if TRUE will vaccine bovine.
+- [ ] `vacc_small ` Is a TRUE or FALSE statement, if TRUE will vaccine small-ruminants.
+- [ ] `infected_zone_vac`Is a TRUE or FALSE statement, if TRUE will  vaccine over the infected control zone area.
+- [ ] `buffer_zone_vac`Is a TRUE or FALSE statement, if TRUE will vaccine over buffer control zone area.
+- [ ] `vacc_infectious_farms` Is a TRUE or FALSE statement, if TRUE infectious farms will be vaccinated.
+- [ ] `vacc_delay` Will set how many days to prepare to vaccinate and  start to vaccinate animals. 
 
 
