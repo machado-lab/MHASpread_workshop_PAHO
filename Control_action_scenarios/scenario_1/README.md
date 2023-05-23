@@ -111,12 +111,31 @@ Is possible to take a snapshot of the map by using the next line
 ```r
 mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
 ```
-
+----
 # How control action simulations works
 
-The simulation of the control actions works using the output of the initial spread (when any control actions were applied) as a starting point to continue with the SEIR dynamics however considering specific control action. Here, all control actions are placed according to specific control areas zones: infected, buffer, and surveillance zones respectively. Let's check out how these control zones looks like by selecting one on the previous simulation runs as an example of the spatial distribution.
+The simulation of the control actions works using the output of the initial spread (when any control actions were applied) as a starting point to continue with the SEIR dynamics however considering specific control action. 
 
+### control zones areas
+Here, all control actions are placed according to specific control areas zones: infected, buffer, and surveillance zones respectively. Let's check out an exmaple of how these control zones looks like by selecting one on the previous simulation runs as an example of the spatial distribution.
 
+ ```r
+detected_farms.id <- MHASpread::id_of_infectious_farms(model_output[[1]]$populationdb,
+                                                       only_infected_comp = F)
+
+zones_arond_inft_farms <- assign_control_zones(population = population,                      # Population database
+                                               infected_size = 3,                               # Ratio size in Km of the infected zone
+                                               buffer_size = 7,                                 # Ratio size in Km of the buffer zone
+                                               surveillance_size = 15,                          # Ratio size in Km of the surveillance zone
+                                               detected_farms.id = detected_farms.id,    # Farms that have been detected
+                                               num_threads = 10)         # Computer threads to be used (please don't overload your computer)
+
+plot_farms_in_control_zones_areas(zones_arond_inft_farms, detected_farms.id)         # Plot interactive map
+
+```
+ 
+
+ <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="400" ></a>
 
 
 
