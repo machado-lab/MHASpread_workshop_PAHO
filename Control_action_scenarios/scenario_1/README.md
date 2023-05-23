@@ -99,6 +99,14 @@ plot_SEIR_animals(model_output = model_output,
                   plot_suceptible_compartment = F,
                   by_host = T)
 ```
+### See the geo-location of the farms 
+Creates an interactive map about the farm that has been infected overall simulation, 
+in the background, the color bins represent the kernel density of the farm location weighted by the number of times in which the farm was infected. Thus, hots color highlights areas with farms that have been infected more times when compared with the others.
+
+```r 
+farms_location <-plot_nodes_kernel_map(model_output = model_output, population = population)
+farms_location
+```
 
 
 
