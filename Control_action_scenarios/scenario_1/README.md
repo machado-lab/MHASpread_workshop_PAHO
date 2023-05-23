@@ -275,7 +275,7 @@ plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
 
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/132366a0-53de-490a-a5ad-8000a1aad356" align="center" width="400" ></a>
 
-#### Depopulated farms during the control actions simulated period 
+#### Depopulated farms distribution during the control actions simulated period 
 
 Lets see the results of the depopulated farms over all simulation
 ```r
@@ -291,9 +291,21 @@ plot_depopulation(control_output = control_output, level_plot = "animals")
 
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/70026a6e-6994-4ca7-8de7-5d4a2dde76ec" align="center" width="400" ></a>
 
+#### vaccinated farms distribution during the control actions simulated period
+
+Lets see the results of the vaccinated farms over all simulation
+```r
+plot_vaccination(control_output = control_output, population = population, level_plot = "farms")
+```
+
+<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/2dfc24b9-3593-4746-81ec-700a12a4fdbb" align="center" width="400" ></a>
 
 
-
+Lets see the results of the vaccinated animals over all simulation
+```r
+plot_vaccination(control_output = control_output, population = population, level_plot = "animals")
+```
+<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/cad0ac86-d7a7-42ff-81f6-b9219e11efe8" align="center" width="400" ></a>
 
 
 
