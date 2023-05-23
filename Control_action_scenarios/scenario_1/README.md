@@ -260,14 +260,36 @@ plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
                                   plot_only_total_farms = T)
 ```
 this function should produce a plot like this:
+
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/98dc45a5-d322-42fb-b485-4f07adee9ad1" align="center" width="400" ></a>
-The y-axis represents the number of infected farms. The x-axis represents the time step period in days. 
+
 
 Now, Lets see the results of the control actions by each farms types
 
+```r
+plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
+                                  model_control = control_output,
+                                  control_action_start_day = 11,
+                                  plot_only_total_farms = F)
+```
 
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/132366a0-53de-490a-a5ad-8000a1aad356" align="center" width="400" ></a>
 
+#### Depopulated farms during the control actions simulated period 
+
+Lets see the results of the depopulated farms over all simulation
+```r
+plot_depopulation(control_output = control_output, level_plot = "farms")
+```
+<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/e4f349ca-4a68-4401-ae19-abbe7957f74d" align="center" width="400" ></a>
+
+
+Lets see the results of the depopulated animals over all simulation
+```r
+plot_depopulation(control_output = control_output, level_plot = "animals")
+```
+
+<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/70026a6e-6994-4ca7-8de7-5d4a2dde76ec" align="center" width="400" ></a>
 
 
 
@@ -280,12 +302,7 @@ Now, Lets see the results of the control actions by each farms types
 
 
 
-#### Plot the number of depopulated farms during the control actions simulated period 
 
-<a href="url"><img src="https://user-images.githubusercontent.com/41584216/206796360-e35b80e6-6949-404a-bb8f-00147ad54a17.png" align="center" width="400" ></a>
 
-The y-axis represents the number of infected farms. The x-axis represents the time step period in days. The colored backgrounds represent the infected farms-by-species over time.
-
-We can also plot this result by the number of infected animals:
 
 
