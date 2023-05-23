@@ -133,9 +133,28 @@ zones_arond_inft_farms <- assign_control_zones(population = population,         
 plot_farms_in_control_zones_areas(zones_arond_inft_farms, detected_farms.id)         # Plot interactive map
 
 ```
- 
+This will produce a interactive map in the *viewer tab*  like this: 
 
  <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="400" ></a>
+
+
+to take a snapshot use: 
+
+```r
+mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
