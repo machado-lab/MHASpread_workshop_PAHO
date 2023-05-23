@@ -203,10 +203,26 @@ This section set the initial conditions of the simulation based on the previous 
 - [ ] `break_sim_if` Breaks the simulation if there are more than *n* infectious farms in the simulation system.
 
 ### Initial condition fo the control actions 
- - [ ]  `days_of_control_action`  represents the total number of days to be working on control actions
- - [ ]  `detectection_rate` Represents the percentage (0%-100%) of farms to be detected by day. Therefore if I have 100 infected farms and the detection rate is 50% the simulation will set control action in n= 50 farms which is 50% of the population.
+- [ ]  `days_of_control_action`  represents the total number of days to be working on control actions
+- [ ]  `detectection_rate` Represents the percentage (0%-100%) of farms to be detected by day. Therefore if I have 100 infected farms and the detection rate is 50% the simulation will set control action in n= 50 farms which is 50% of the population.
 - [ ]   `only_infected_comp`  is a TRUE or FALSE statement, if TRUE will detect only animals in the infectious compartment, this is an approximation to say that only symptomatic and infectious and will be detected i.e. animals with clinical sing as blisters 
 
+### Control  zones areas set up 
+This section setups the frequency at which the control zones are updated based on the informed detected infected farms (established in the previous chunk), here :
+- [ ] `freq_updt_cntrl_zns`  Is a numeric value in days which represents how often the control zones will be updated i.e. 1, 7, 15 days.
+- [ ] `infected_size_cz` Ratio size in Km of the infected zone.
+- [ ] `buffer_size_cz`   Ratio size in Km of the buffer zone.
+- [ ] `surveillance_size_cz` Ratio size in Km of the surveillance zone.
+
+#### Farm standstill
+With this function, we will control the movements between farms from infected areas to uninfected regions. 
+
+- [ ] `ban_length` Is a numeric value that will control the number of days in which the movement of farms will not be allowed.
+- [ ] `infected_zone_mov` Is a TRUE or FALSE statement, if TRUE  animal ban movements will be applied to the infected zone
+- [ ] `buffer_zone_mov` Is a TRUE or FALSE statement, if TRUE  animal ban movements will be applied to the buffer zone.
+- [ ] `surveillance_zone_mov` Is a TRUE or FALSE statement, if TRUE animal ban movements will be applied to the  surveillance zone.
+- [ ] `direct_contacts_mov`  Is a TRUE or FALSE statement, if TRUE animal ban movements will apply to farms outside of the control action areas but with registered movements with contact with positive farms.
+- [ ] `traceback_length_mov` Is a numeric value that indicates how many steps in the network the ban of the movement can be extended.
 
 
 
