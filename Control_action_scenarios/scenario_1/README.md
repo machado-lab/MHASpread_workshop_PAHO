@@ -231,7 +231,8 @@ Here we are going to take into account the depopulation of farms. 
 - [ ] `infected_zone_dep` Is a TRUE or FALSE statement, if TRUE will allow to depopulate farms in the *infected zone* even if they are not positive or vaccinated.
 - [ ] only_depop_infect_farms Is a TRUE or FALSE statement, if TRUE will depopulated *ONLY* infected farms detected, otherwise will stamping out all farms in the infected zone.
 
-# Vaccination setup This function will implement daily on-farm vaccination in the simulated population.
+#### Vaccination setup 
+This function will implement daily on-farm vaccination in the simulated population.
 
 - [ ] `days_to_get_inmunity` numeric valuer that describes the number of days in which a population will be 100% immunized
 - [ ] `limit_per_day_farms` Numeric value that will set the maximum number of farms to be vaccinated per day in BUFFER area
