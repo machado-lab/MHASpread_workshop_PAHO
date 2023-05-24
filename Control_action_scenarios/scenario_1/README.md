@@ -268,7 +268,7 @@ Now, Lets see the results of the control actions by each farms types
 
 ```r
 plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
-                                  model_control = control_output,
+                                  model_control = control_model,
                                   control_action_start_day = 11,
                                   plot_only_total_farms = F)
 ```
@@ -279,14 +279,14 @@ plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
 
 Lets see the results of the depopulated farms over all simulation
 ```r
-plot_depopulation(control_output = control_output, level_plot = "farms")
+plot_depopulation(control_output = control_model, level_plot = "farms")
 ```
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/e4f349ca-4a68-4401-ae19-abbe7957f74d" align="center" width="400" ></a>
 
 
 Lets see the results of the depopulated animals over all simulation
 ```r
-plot_depopulation(control_output = control_output, level_plot = "animals")
+plot_depopulation(control_output = control_model, level_plot = "animals")
 ```
 
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/70026a6e-6994-4ca7-8de7-5d4a2dde76ec" align="center" width="400" ></a>
@@ -295,7 +295,7 @@ plot_depopulation(control_output = control_output, level_plot = "animals")
 
 Lets see the results of the vaccinated farms over all simulation
 ```r
-plot_vaccination(control_output = control_output, population = population, level_plot = "farms")
+plot_vaccination(control_output = control_model, population = population, level_plot = "farms")
 ```
 
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/2dfc24b9-3593-4746-81ec-700a12a4fdbb" align="center" width="400" ></a>
@@ -303,7 +303,7 @@ plot_vaccination(control_output = control_output, population = population, level
 
 Lets see the results of the vaccinated animals over all simulation
 ```r
-plot_vaccination(control_output = control_output, population = population, level_plot = "animals")
+plot_vaccination(control_output = control_model, population = population, level_plot = "animals")
 ```
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/cad0ac86-d7a7-42ff-81f6-b9219e11efe8" align="center" width="400" ></a>
 
