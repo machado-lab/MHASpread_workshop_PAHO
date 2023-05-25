@@ -219,19 +219,20 @@ This section set the initial conditions of the simulation based on the previous 
 This section setups the frequency at which the control zones are updated based on the informed detected infected farms (established in the previous model settting), here:
 
 - [ ] `freq_updt_cntrl_zns` Is a numeric value in days which represents how often the control zones will be updated i.e. 1, 7, 15 days.
-- [ ] `infected_size_cz` Ratio size in Km of the infected zone.
-- [ ] `buffer_size_cz` Ratio size in Km of the buffer zone.
-- [ ] `surveillance_size_cz` Ratio size in Km of the surveillance zone.
+- [ ] `infected_size_cz` Size of the infected zone(s) in Km
+- [ ] `buffer_size_cz` Size of the buffer zone(s) in Km
+- [ ] `surveillance_size_cz` Size of the surveillance zone(s) in Km
 
 #### Animal movements standstill setup 
-With this function, we will control the movements between farms from infected areas to uninfected regions. 
+
+This function stop movements between farms.
 
 - [ ] `ban_length` Is a numeric value that will control the number of days in which the movement of farms will not be allowed.
-- [ ] `infected_zone_mov` Is a TRUE or FALSE statement, if TRUE  animal ban movements will be applied to the infected zone
-- [ ] `buffer_zone_mov` Is a TRUE or FALSE statement, if TRUE  animal ban movements will be applied to the buffer zone.
-- [ ] `surveillance_zone_mov` Is a TRUE or FALSE statement, if TRUE animal ban movements will be applied to the  surveillance zone.
-- [ ] `direct_contacts_mov`  Is a TRUE or FALSE statement, if TRUE animal ban movements will apply to farms outside of the control action areas but with registered movements with contact with positive farms.
-- [ ] `traceback_length_mov` Is a numeric value that indicates how many steps in the network the ban of the movement can be extended.
+- [ ] `infected_zone_mov` Is a TRUE or FALSE statement, if TRUE  animal ban movements will be applied to the infected zone(s)
+- [ ] `buffer_zone_mov` Is a TRUE or FALSE statement, if TRUE  animal ban movements will be applied to the buffer zone(s).
+- [ ] `surveillance_zone_mov` Is a TRUE or FALSE statement, if TRUE animal ban movements will be applied to the  surveillance zone(s).
+- [ ] `direct_contacts_mov`  Is a TRUE or FALSE statement, if TRUE animal ban movements will apply to farms outside of the control zones with contact with positive farms.
+- [ ] `traceback_length_mov` Is a numeric value that indicates how many steps in the network the movement ban will be extended.
 
 #### Depopulation setup
 Here we are going to take into account the depopulation of farms.
