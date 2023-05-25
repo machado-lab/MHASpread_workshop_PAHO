@@ -242,7 +242,7 @@ Farm level depopulation
 #### Vaccination setup
 This function will implement daily animal level vaccination
 
-- [ ] `days_to_get_inmunity` Numeric value that describes the number of many days farms become 100% protected (immunity)
+-[ ] `days_to_get_inmunity` Numeric value that describes the number of many days farms become 100% protected (immunity)
 - [ ] `limit_per_day_farms` Numeric value wit the maximum number of farms to be vaccinated in buffer zone(s)
 - [ ] `limit_per_day_farms_infct` Numeric value wit the maximum number of farms to be vaccinated in infected zone(s)
 - [ ] `vacc_eff` = A numeric value between 0 and 1 indicating the efficacy of the vaccine.
