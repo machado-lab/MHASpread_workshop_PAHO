@@ -314,4 +314,4 @@ Results of total vaccinated animals
 ```r
 plot_vaccination(control_output = control_output, population = population, level_plot = "animals")
 ```
-<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/cad0ac86-d7a7-42ff-81f6-b9219e11efe8" align="center" width="500" ></a>
+<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/cad0ac86-d7a7-42ff-81f6-b9219e11efe8" align="center" width="500" hight="100"></a>
