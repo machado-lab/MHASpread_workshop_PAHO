@@ -104,8 +104,11 @@ plot_SEIR_animals(model_output = model_output, # Model output
 Creates an interactive map about the farm that has been infected overall simulation, 
 in the background, the color bins represent the kernel density of the farm location weighted by the number of times in which the farm was infected. Thus, hots color highlights areas with farms that have been infected more times when compared with the others.
 
+### Epidemic spatial distribution
 ```r 
-farms_location <-plot_nodes_kernel_map(model_output = model_output, population = population)
+farms_location <-plot_nodes_kernel_map(model_output = model_output,
+              population = population)
+
 farms_location
 ```
 Is possible to take a snapshot of the map by using the next line 
@@ -115,10 +118,10 @@ mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  
 ----
 # How control action simulations works
 
-The simulation of the control actions works using the output of the initial spread (when any control actions were applied) as a starting point to continue with the SEIR dynamics however considering specific control action. 
+Control actions use the output of the initial spread. Control actions start in the next day post index case detection.
 
-### control zones areas
-Here, all control actions are placed according to specific control areas zones: infected, buffer, and surveillance zones respectively. Let's check out an exmaple of how these control zones looks like by selecting one on the previous simulation runs as an example of the spatial distribution.
+### Explore control zones assuming detection of 100%
+Here, all control actions are placed according to specific control areas zones: infected, buffer, and surveillance zones, respectively. Let's check out an example of how these control zones look by selecting one of the previous simulation runs as an example of spatial distribution.
 
  ```r
 detected_farms.id <- MHASpread::id_of_infectious_farms(model_output[[1]]$populationdb,
