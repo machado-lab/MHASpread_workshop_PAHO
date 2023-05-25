@@ -235,26 +235,26 @@ This function stop movements between farms.
 - [ ] `traceback_length_mov` Is a numeric value that indicates how many steps in the network the movement ban will be extended.
 
 #### Depopulation setup
-Here we are going to take into account the depopulation of farms.
-- [ ] `limit_per_day_farms_dep` For modeling purposes, we are going to set the maximum number of farms to be depopulated per day. Here, the properties will be prioritized according to the following criteria: > cattle population > swine population > small ruminant population.
-- [ ] `infected_zone_dep` Is a TRUE or FALSE statement, if TRUE will allow to depopulate farms in the *infected zone* even if they are not positive or vaccinated.
-- [ ] only_depop_infect_farms Is a TRUE or FALSE statement, if TRUE will depopulated *ONLY* infected farms detected, otherwise will stamping out all farms in the infected zone.
+Farm level depopulation
+- [ ] `limit_per_day_farms_dep` For modeling purposes, we are going to set the maximum number of farms to be depopulated per day. Here, the properties will be prioritized according to the following criteria: First cattle population > Second swine population > Third small ruminant.
+- [ ] `infected_zone_dep` Is a TRUE or FALSE statement, if TRUE will allow to depopulate farms in the *infected zone(s)* even if they are not positive and/or vaccinated.
+- [ ] `only_depop_infect_farms' Is a TRUE or FALSE statement, if TRUE will depopulated *ONLY* infected detected farms, otherwise will stamping out all farms in the infected zone(s).
 
 #### Vaccination setup
-This function will implement daily on-farm vaccination in the simulated population.
+This function will implement daily animal level vaccination
 
-- [ ] `days_to_get_inmunity` Numeric valuer that describes the number of days in which a population will be 100% immunized.
-- [ ] `limit_per_day_farms` Numeric value that will set the maximum number of farms to be vaccinated per day in BUFFER area.
-- [ ] `limit_per_day_farms_infct` Numeric value that will set the maximum number of farms to be vaccinated per day in INFECTED area.
-- [ ] `vacc_eff` = Is a numeric value between 0 and 1 indicating the efficacy of the vaccine.
-- [ ] `dt` = is a rate of conversion to SEIR population to a vaccinated compartment i.e 1/15.
+- [ ] `days_to_get_inmunity` Numeric value that describes the number of many days farms become 100% protected (immunity)
+- [ ] `limit_per_day_farms` Numeric value that will set the maximum number of farms to be vaccinated per day in BUFFER zone(s)
+- [ ] `limit_per_day_farms_infct` Numeric value that will set the maximum number of farms to be vaccinated per day in INFECTED zone(s).
+- [ ] `vacc_eff` = A numeric value between 0 and 1 indicating the efficacy of the vaccine.
+- [ ] `dt` = Rate of conversion to SEIR -> V compartment, i.e 1/15
 - [ ] `vacc_swine` Is a TRUE or FALSE statement, if TRUE will vaccine swine.
 - [ ] `vacc_bovine`Is a TRUE or FALSE statement, if TRUE will vaccine bovine.
 - [ ] `vacc_small `Is a TRUE or FALSE statement, if TRUE will vaccine small-ruminants.
-- [ ] `infected_zone_vac`Is a TRUE or FALSE statement, if TRUE will vaccine over the infected control zone area.
-- [ ] `buffer_zone_vac`Is a TRUE or FALSE statement, if TRUE will vaccine over buffer control zone area.
-- [ ] `vacc_infectious_farms` Is a TRUE or FALSE statement, if TRUE infectious farms will be vaccinated.
-- [ ] `vacc_delay` Will set how many days to prepare to vaccinate and start to vaccinate animals.
+- [ ] `infected_zone_vac` Is a TRUE or FALSE statement, if TRUE will vaccine all within infected zone(s).
+- [ ] `buffer_zone_vac`Is a TRUE or FALSE statement, if TRUE will vaccine all within buffer zone(s).
+- [ ] `vacc_infectious_farms` Is a TRUE or FALSE statement, if TRUE infected farms will be vaccinated.
+- [ ] `vacc_delay` Will set how many days to prepare to vaccinate and start the vaccination in the field.
 
 # Plot results of control action modelling
 
