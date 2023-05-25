@@ -87,18 +87,18 @@ plot_infected_farms_curve(model_output = model_output, host = "Small ruminants")
 
 ###  Initial spread epidemic curves (animal-level)  
 
-* Plot  animal infected curves considering all species
+* Plot infected animal distribution, all species
 ```r
-plot_SEIR_animals(model_output = model_output,
-                  plot_suceptible_compartment = F,
-                  by_host = F)
+plot_SEIR_animals(model_output = model_output, # Model output
+                  plot_suceptible_compartment = F, # FALSE to hide S animals
+                  by_host = F) # Select whether plot by specie or all species together
 ```
 
-* Plot  animal infected curves considering by species
+* Plot infected animal distribution by species
 ```r
-plot_SEIR_animals(model_output = model_output,
-                  plot_suceptible_compartment = F,
-                  by_host = T)
+plot_SEIR_animals(model_output = model_output, # Model output
+                  plot_suceptible_compartment = F, # FALSE to hide S animals
+                  by_host = T) # TRUE will plot all species together
 ```
 ### See the geo-location of the farms 
 Creates an interactive map about the farm that has been infected overall simulation, 
