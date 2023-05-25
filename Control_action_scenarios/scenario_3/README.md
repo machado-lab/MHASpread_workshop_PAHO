@@ -123,18 +123,22 @@ Control actions use the output of the initial spread. Control actions start in t
 ### Explore control zones assuming detection of 100%
 Here, all control actions are placed according to specific control areas zones: infected, buffer, and surveillance zones, respectively. Let's check out an example of how these control zones look by selecting one of the previous simulation runs as an example of spatial distribution.
 
+#=========================================================#
+#                              Control zones          ----
+#=========================================================#
  ```r
 detected_farms.id <- MHASpread::id_of_infectious_farms(model_output[[1]]$populationdb,
-                                                       only_infected_comp = F)
+                     only_infected_comp = F) # FALSE will take all infection status
 
-zones_arond_inft_farms <- assign_control_zones(population = population,                      # Population database
-                                               infected_size = 3,                               # Ratio size in Km of the infected zone
-                                               buffer_size = 7,                                 # Ratio size in Km of the buffer zone
-                                               surveillance_size = 15,                          # Ratio size in Km of the surveillance zone
-                                               detected_farms.id = detected_farms.id,    # Farms that have been detected
-                                               num_threads = 10)         # Computer threads to be used (please don't overload your computer)
+zones_arond_inft_farms <- assign_control_zones(
+            population = population, # Population database
+            infected_size = 3, # Size of the infected zone in Km
+            buffer_size = 7, # Size of the buffer zone
+            surveillance_size = 15, # Size of the surveillance zone
+            detected_farms.id = detected_farms.id,# Detected farms
+            num_threads = 10) # Computer threads (don't overload your computer)
 
-plot_farms_in_control_zones_areas(zones_arond_inft_farms, detected_farms.id)         # Plot interactive map
+plot_farms_in_control_zones_areas(zones_arond_inft_farms, detected_farms.id) # Plot interactive map      
 
 ```
 This will produce a interactive map in the *viewer tab*  like this: 
@@ -147,7 +151,7 @@ to take a snapshot use:
 ```r
 mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
 ```
-the next large function has a bunch of arguments that control different *control actions* in the simulations to be performed. Then, the next paragraph will explain how to set those arguments *argument by argument* in the function:
+the next large function has a bunch of arguments that control different *control actions* in the simulations to be performed. Then, the next paragraph will explain how to set those arguments *argument by argument* in the function:
 
 ```r
 control_model <- control_actions(
