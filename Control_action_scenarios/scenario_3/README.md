@@ -200,7 +200,7 @@ control_model <- control_actions(
   vacc_infectious_farms =   T,               # TRUE vaccinate infected animals
   vacc_delay = 5)                            # How many days until vaccination is started
   
-Lets revisit each section of the `control_actions` function in more details:
+Let's revisit each section of the `control_actions` function in more detail:
 
 #### Model setup
 This section set the initial conditions of the simulation based on the previous runs.
@@ -210,13 +210,13 @@ This section set the initial conditions of the simulation based on the previous 
 - [ ] `events Initial` Are the scheduled movements (births, death, farm-to-farm, and farm-to-slaughterhouses).
 - [ ] `break_sim_if` Stop the simulation if there are more than *n* infectious farms in the simulation system.
 
-#### Control actions initial conditions
+#### Control actions initial conditions setup 
 - [ ] `days_of_control_action` Represents the total number of days to be working in the field while appling control actions.
 - [ ] `detectection_rate` Represents the percentage (0%-100%) of farms to be detected by day. Therefore if you have 100 infected farms and the detection rate is 50% the simulation will set control action in n= 50 farms which is 50% of the population.
 - [ ] `only_infected_comp` Is a TRUE or FALSE statement, if TRUE will detect only animals in the infectious compartment (I), this is an approximation to say that only symptomatic and infectious and will be detected i.e. animals with clinical sing as blisters. 
 
-#### Control zones
-This section setups the frequency at which the control zones are updated based on the informed detected infected farms (established in the previous chunk), here :
+#### Control zones setup 
+This section setups the frequency at which the control zones are updated based on the informed detected infected farms (established in the previous model settting), here:
 
 - [ ] `freq_updt_cntrl_zns` Is a numeric value in days which represents how often the control zones will be updated i.e. 1, 7, 15 days.
 - [ ] `infected_size_cz` Ratio size in Km of the infected zone.
