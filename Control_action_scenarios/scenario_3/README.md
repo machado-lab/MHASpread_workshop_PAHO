@@ -150,6 +150,8 @@ Save a snapshot
 ```r
 mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
 ```
+
+# Control actions
 The next function has a bunch of arguments that control different *control actions* in the simulations to be performed. Then, the next paragraph will explain how to set those arguments *argument by argument* in the function:
 
 ```r
