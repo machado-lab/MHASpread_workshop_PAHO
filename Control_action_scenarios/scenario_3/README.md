@@ -146,12 +146,12 @@ This will produce a interactive map in the *viewer tab*  like this:
  <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="400" ></a>
 
 
-to take a snapshot use: 
+Save a snapshot
 
 ```r
 mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
 ```
-the next large function has a bunch of arguments that control different *control actions* in the simulations to be performed. Then, the next paragraph will explain how to set those arguments *argument by argument* in the function:
+The next function has a bunch of arguments that control different *control actions* in the simulations to be performed. Then, the next paragraph will explain how to set those arguments *argument by argument* in the function:
 
 ```r
 control_model <- control_actions(
