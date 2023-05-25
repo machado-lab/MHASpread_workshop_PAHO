@@ -88,59 +88,59 @@ zones_arond_inft_farms <- assign_control_zones(
 plot_farms_in_control_zones_areas(zones_arond_inft_farms, detected_farms.id) # Plot interactive map  
 
 #==========================================================================#
-# Control actions                   -----------------------
+# Control actions                                   -----------------------
 #==========================================================================#
-# the next lines run the control action based on the previous initial spread simulations
+# The lines run the control action based on the previous initial spread simulations
 
 control_model <- control_actions(
   # MODEL SETUP
   num_threads = 4,                           # Number of CPUs
-  model_output = model_output,               # Output object of the function stochastic_SEIR()
-  population_data = MHASpread::population,   # Naive population  before the simulations
-  events = MHASpread::events,                # Initial Scheduled movements
-  break_sim_if = 50,                         # Breaks the simulation if there ar more than n infectious farms
-
+  model_output = model_output,               # Output object from the initial infection [function stochastic_SEIR()]
+  population_data = MHASpread::population,   # Population database, all animals are susceptible
+  events = MHASpread::events,                # Movement events (in and/or out), birth or death
+  break_sim_if = 50,                         # Stop simulation(s) if there are more than N infected farms
+  
   # INITIAL CONDITION OF THE CONTROL ACTIONS
-  days_of_control_action = 10,               # Number of days to be working on control actions
-  detectection_rate = 50,                    # Detection rate per day (in percentage % (0%-100%))
-  only_infected_comp = T,                    # If True will detect only animal in the infectious compartment
-
+  days_of_control_action = 20,               # Number of days control actions will be applied for
+  detectection_rate = 50,                    # Detection rate per day, in percentage % (chose from 0%-100%)
+  only_infected_comp = T,                    # TRUE will detect only animal in the infectious compartment
+  
   # CONTROL ZONES AREAS SETUP
-  freq_updt_cntrl_zns = 7,                   # How often the control zones will be update i.e. 1, 7, 15 days
-  infected_size_cz = 3,                      # Ratio size in Km of the infected zone
-  buffer_size_cz = 7,                        # Ratio size in Km of the buffer zone
-  surveillance_size_cz = 15,                 # Ratio size in Km of the surveillance zone
-
+  freq_updt_cntrl_zns = 7,                   # How often control zone(s) will be update i.e. 1, 7, 15 days
+  infected_size_cz = 3,                      # Size of the infected zone(s) in Km
+  buffer_size_cz = 7,                        # Size of the buffer zone(s) in Km
+  surveillance_size_cz = 15,                 # Size of the surveillance zone(s) in Km
+  
   # ANIMAL MOVEMENTS STANDSTILL SETUP
-  ban_length = 30,                           #  30 days of movements ban
-  infected_zone_mov = T,                     #  Animal ban will be applied to infected zone
-  buffer_zone_mov = T,                       #  Animal ban will be applied to buffer zone
-  surveillance_zone_mov = T,                 #  Animal ban will be applied to surveillance zone
-  direct_contacts_mov = T,                   #  Ban farm outside of control zones with contact with positive farms
-  traceback_length_mov = 1,                  #  Traceback in-going animals movements of infected farms
-
+  ban_length = 30,                           #  Number of days of movements ban (standstill)
+  infected_zone_mov = T,                     #  Animal movement ban (standstill) will be applied to infected zone(s)
+  buffer_zone_mov = T,                       #  Animal movement ban (standstill) will be applied to buffer zone(s)
+  surveillance_zone_mov = T,                 #  Animal movement ban (standstill) will be applied to surveillance zone(s)
+  direct_contacts_mov = T,                   #  TRUE will ban movements of farm(s) outside of control zone(s) with contact with positive farms
+  traceback_length_mov = 1,                  # Trace back in-going animal movement with infected farms
+  
   # DEPOPULATION SETUP
-  limit_per_day_farms_dep = 8,               #  Farm will be depopulated by day
-  infected_zone_dep = T,                     #  Depopulation will be applied to infected zone
-  only_depop_infect_farms = T,               #  If False stamping out all farms in the infected zone
-
+  limit_per_day_farms_dep = 4,               #  Number of farm(s) to be depopulated by day
+  infected_zone_dep = T,                     #  Depopulation will be applied to infected zone(s)
+  only_depop_infect_farms = T,               #  FALSE stamping out all farms in infected zone(s)
+  
   # VACCINATION SETUP
-  days_to_get_inmunity = 15,                 # How many days to be considered 100% immune
-  limit_per_day_farms = 20,                  # Maximum number of farms to be vaccinated in BUFFER area
-  limit_per_day_farms_infct = 30,            # Maximum number of farms to be vaccinated in INFECTED area
-  vacc_eff = 0.7,                            # Numeric value between 0 and 1 indicating the efficacy of the vaccine
-  dt = 1/15,                                 # Rate of conversion to SEIR -> V compartment i.e 1/15
-  vacc_swine = T,                            # If true vaccine swine
-  vacc_bovine = T,                           # If true vaccine bovine
-  vacc_small = T,                            # If true vaccine small ruminants
-  infected_zone_vac =T ,                     # If true vaccine over infected control zone area
-  buffer_zone_vac = T,                       # If true vaccine over buffer control zone area
-  vacc_infectious_farms =   T,               # If true infectious farms will be vaccinated
-  vacc_delay = 5)                            # How many days until start the vaccination
+  days_to_get_inmunity = 15,                 # How many days farms become 100% protected (immunity)
+  limit_per_day_farms = 25,                  # Maximum number of farms to be vaccinated in buffer zone(s)
+  limit_per_day_farms_infct = 25,            # Maximum number of farms to be vaccinated in infected zone(s)
+  vacc_eff = 0.7,                            # A numeric value between 0 and 1 indicates vaccine efficacy.
+  dt = 1/15,                                 # Rate of conversion to SEIR -> V compartment, i.e 1/15
+  vacc_swine = T,                            # TRUE vaccine swine
+  vacc_bovine = T,                           # TRUE vaccine bovine
+  vacc_small = T,                            # TRUE vaccine small ruminants
+  infected_zone_vac =T ,                     # TRUE vaccine is applied in infected zone(s)
+  buffer_zone_vac = T,                       # TRUE vaccine is applied in buffer zone(s)
+  vacc_infectious_farms =   T,               # TRUE vaccinate infected animals
+  vacc_delay = 5)                            # How many days until vaccination is started
 
-#==========================================#
-#            Epidemic distribution     ----
-#==========================================#
+#=============================================================#
+#            Plot results of control action modelling     ----
+#============================================================#
 # Lets see the results of the control actions when considering all farms types
 plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
                                   model_control = control_model,
@@ -154,7 +154,7 @@ plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
                                   plot_only_total_farms = F)
 
 #==========================================#
-#    Depopulated farms distribution    ----
+#    Results of total depopulated   ----
 #==========================================#
 # Lets see the results of the depopulated farms over all simulation
 plot_depopulation(control_output = control_model, level_plot = "farms")
@@ -163,7 +163,7 @@ plot_depopulation(control_output = control_model, level_plot = "farms")
 plot_depopulation(control_output = control_model, level_plot = "animals")
 
 #==========================================#
-#    vaccinated farms distribution    ----
+#   Results of total farms vaccinated   ----
 #==========================================#
 # Lets see the results of the vaccinated farms over all simulation
 plot_vaccination(control_output = control_model, population = population, level_plot = "farms")
