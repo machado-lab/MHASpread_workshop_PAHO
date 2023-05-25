@@ -123,9 +123,9 @@ Control actions use the output of the initial spread. Control actions start in t
 ### Explore control zones assuming detection of 100%
 Here, all control actions are placed according to specific control areas zones: infected, buffer, and surveillance zones, respectively. Let's check out an example of how these control zones look by selecting one of the previous simulation runs as an example of spatial distribution.
 
-#=========================================================#
-#                              Control zones          ----
-#=========================================================#
+
+# Control zones          
+
  ```r
 detected_farms.id <- MHASpread::id_of_infectious_farms(model_output[[1]]$populationdb,
                      only_infected_comp = F) # FALSE will take all infection status
@@ -244,8 +244,8 @@ Farm level depopulation
 This function will implement daily animal level vaccination
 
 - [ ] `days_to_get_inmunity` Numeric value that describes the number of many days farms become 100% protected (immunity)
-- [ ] `limit_per_day_farms` Numeric value that will set the maximum number of farms to be vaccinated per day in BUFFER zone(s)
-- [ ] `limit_per_day_farms_infct` Numeric value that will set the maximum number of farms to be vaccinated per day in INFECTED zone(s).
+- [ ] `limit_per_day_farms` Numeric value wit the maximum number of farms to be vaccinated in buffer zone(s)
+- [ ] `limit_per_day_farms_infct` Numeric value wit the maximum number of farms to be vaccinated in infected zone(s)
 - [ ] `vacc_eff` = A numeric value between 0 and 1 indicating the efficacy of the vaccine.
 - [ ] `dt` = Rate of conversion to SEIR -> V compartment, i.e 1/15
 - [ ] `vacc_swine` Is a TRUE or FALSE statement, if TRUE will vaccine swine.
@@ -258,7 +258,7 @@ This function will implement daily animal level vaccination
 
 # Plot results of control action modelling
 
-Here, we will visualize some results from the model after running the control actions in our simulations.
+Here, we will visualize some results from the model after running the control actions.
 
 #### Plot the number of infected farm considering initial spread + the control actions
 Lets see the results of the control actions when considering all farms types
@@ -268,12 +268,12 @@ plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
                                   control_action_start_day = 11,
                                   plot_only_total_farms = T)
 ```
-this function should produce a plot like this:
+This function will produce the following plot:
 
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/98dc45a5-d322-42fb-b485-4f07adee9ad1" align="center" width="400" ></a>
 
 
-Now, Lets see the results of the control actions by each farms types
+Now, let's see the results of the control actions by farms types
 
 ```r
 plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
@@ -286,14 +286,14 @@ plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
 
 #### Depopulated farms distribution during the control actions simulated period 
 
-Lets see the results of the depopulated farms over all simulation
+Let's see the results for the total farms depopulated
 ```r
 plot_depopulation(control_output = control_output, level_plot = "farms")
 ```
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/e4f349ca-4a68-4401-ae19-abbe7957f74d" align="center" width="400" ></a>
 
 
-Lets see the results of the depopulated animals over all simulation
+Let's see the results for the total animals depopulated
 ```r
 plot_depopulation(control_output = control_output, level_plot = "animals")
 ```
@@ -302,7 +302,7 @@ plot_depopulation(control_output = control_output, level_plot = "animals")
 
 #### vaccinated farms distribution during the control actions simulated period
 
-Lets see the results of the vaccinated farms over all simulation
+Let's see the results for the total vaccinated farms
 ```r
 plot_vaccination(control_output = control_output, population = population, level_plot = "farms")
 ```
@@ -310,7 +310,7 @@ plot_vaccination(control_output = control_output, population = population, level
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/2dfc24b9-3593-4746-81ec-700a12a4fdbb" align="center" width="400" ></a>
 
 
-Lets see the results of the vaccinated animals over all simulation
+Let's see the results for the total vaccinated animals
 ```r
 plot_vaccination(control_output = control_output, population = population, level_plot = "animals")
 ```
