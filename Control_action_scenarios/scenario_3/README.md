@@ -286,14 +286,14 @@ plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
 
 #### Depopulated farms distribution during the control actions simulated period 
 
-Let's see the results for the total farms depopulated
+Results of total farms depopulated
 ```r
 plot_depopulation(control_output = control_output, level_plot = "farms")
 ```
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/e4f349ca-4a68-4401-ae19-abbe7957f74d" align="center" width="400" ></a>
 
 
-Let's see the results for the total animals depopulated
+Results of total animals depopulated
 ```r
 plot_depopulation(control_output = control_output, level_plot = "animals")
 ```
@@ -302,7 +302,7 @@ plot_depopulation(control_output = control_output, level_plot = "animals")
 
 #### vaccinated farms distribution during the control actions simulated period
 
-Let's see the results for the total vaccinated farms
+Results of total vaccinated farms
 ```r
 plot_vaccination(control_output = control_output, population = population, level_plot = "farms")
 ```
@@ -310,8 +310,8 @@ plot_vaccination(control_output = control_output, population = population, level
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/2dfc24b9-3593-4746-81ec-700a12a4fdbb" align="center" width="400" ></a>
 
 
-Let's see the results for the total vaccinated animals
+Results of total vaccinated animals
 ```r
 plot_vaccination(control_output = control_output, population = population, level_plot = "animals")
 ```
-<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/cad0ac86-d7a7-42ff-81f6-b9219e11efe8" align="center" width="400" ></a>
+<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/cad0ac86-d7a7-42ff-81f6-b9219e11efe8" align="center" width="500" ></a>
