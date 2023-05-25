@@ -5,15 +5,19 @@ Here, we describe the population and events data used for dissemination and cont
 ## Backgroud 
 
 The infection starts at the farm node with ID= `196734` which has a population of `100` animals. 
-Here, FMD was first detected `14` days after the initial disease introduction (infection started with `40` infected animals).
+Here, FMD was first detected `7` days after the initial disease introduction (infection started with `40` infected animal cattle).
+
+## Data preparation
+1. Population data: total number of animals
 
 ```r 
-population <- MHASpread::population  # Get the population data example
-population$I_bov_pop[population$node== 196734] <- 40    #  # Infected 40 bovine in the farm id = 196734
-
-# select the in and out farm dynamics (movements, births, deaths, etc... )
-events <- MHASpread::events # load the events' database
-
+population <- MHASpread::population # Get the population data example
+population$I_bov_pop[population$node== 196734] <- 40 # Infected 40 bovine in farm with id = 196734
+```
+2. Events data: between farm movements (in and/or out), birth or death
+```r 
+# Select the in and out farm dynamics (movements, births, deaths)
+events <- MHASpread::events # Load the events database
 ```
 
 ## Silent spread 
