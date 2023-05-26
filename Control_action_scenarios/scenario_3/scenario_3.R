@@ -1,7 +1,7 @@
 library(MHASpread);library(geobr)
 
 population <- MHASpread::population # Get the population data example
-population$I_bov_pop[population$node== 196734] <- 40 # Infected 40 bovine in farm with id = 196734
+population$I_bov_pop[population$node== 259021] <- 40 # Infected 40 bovine in farm with id = 196734
 events <- MHASpread::events # Load the events database
 
 # Get the study region
@@ -14,7 +14,7 @@ RS <- read_municipality(
 # Selected seeded farm 
 population_map <- population %>%
   st_as_sf(coords = c("longitude", "latitude"), crs=4326)%>%
-  filter(population$node== 196734)
+  filter(population$node== 259021)
 
 # Map seeded farm  
 ggplot() +
@@ -93,7 +93,7 @@ mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  
 #=========================================================#
 # So if we establish control areas zones from a specific simulation == 1 looks like:
 detected_farms.id <- MHASpread::id_of_infectious_farms(model_output[[1]]$populationdb,
-                                                       only_infected_comp = F) # FALSE will take all infection status
+                                                       only_infected_comp = T) # FALSE will take all infection status
 
 zones_arond_inft_farms <- assign_control_zones(
   population = population, # Population database
