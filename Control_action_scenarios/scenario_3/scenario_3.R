@@ -22,7 +22,6 @@ ggplot() +
   geom_sf(data = RS, fill = NA, color = "grey", size = 0.005, alpha = 2)+
   labs(subtitle="Municipalities de Rio Grand do Sul", size=8) 
 
-
 # Run the stochastic simulation
 model_output <- stochastic_SEIR (
   number_of_simulation = 1, # Number of model repeats
@@ -189,5 +188,3 @@ plot_vaccination(control_output = control_model, population = population, level_
 
 # Lets see the results of the vaccinated animals over all simulation
 plot_vaccination(control_output = control_model, population = population, level_plot = "animals")
-
-
