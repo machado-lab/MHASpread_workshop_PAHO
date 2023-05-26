@@ -1,8 +1,27 @@
-library(MHASpread)
+library(MHASpread);library(geobr)
 
 population <- MHASpread::population # Get the population data example
 population$I_bov_pop[population$node== 196734] <- 40 # Infected 40 bovine in farm with id = 196734
 events <- MHASpread::events # Load the events database
+
+# Get the study region
+RS <- read_municipality(
+  code_muni = "RS", 
+  year= 2010,
+  showProgress = FALSE
+)
+
+# Selected seeded farm 
+population_map <- population %>%
+  st_as_sf(coords = c("longitude", "latitude"), crs=4326)%>%
+  filter(population$node== 196734)
+
+# Map seeded farm  
+ggplot() +
+  geom_sf(data = population_map, color="red") + 
+  geom_sf(data = RS, fill = NA, color = "grey", size = 0.005, alpha = 2)+
+  labs(subtitle="Municipalities de Rio Grand do Sul", size=8) 
+
 
 # Run the stochastic simulation
 model_output <- stochastic_SEIR (
