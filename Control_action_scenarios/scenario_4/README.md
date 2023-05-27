@@ -5,7 +5,7 @@ Here, we describe the population and events data used for dissemination and cont
 ## Backgroud 
 
 The infection starts at the farm node with ID= `11256` which has a population of `109` cattle and `182` small ruminants. 
-Here, FMD was first detected `7` days after the initial disease introduction (infection started with `40` infected animal cattle).
+Here, FMD was first detected `7` days after the initial disease introduction (infection started with `30` infected animal cattle).
 
 ## Data preparation
 1. Population data: total number of animals
