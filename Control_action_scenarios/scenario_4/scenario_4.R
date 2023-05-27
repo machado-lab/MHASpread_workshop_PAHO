@@ -1,7 +1,7 @@
 library(MHASpread);library(geobr)
 
 population <- MHASpread::population # Get the population data example
-population$I_bov_pop[population$node== 196734] <- 40 # Infected 40 bovine in farm with id = 196734
+population$I_bov_pop[population$node== 11256] <- 30 # Infected 40 bovine in farm with id = 196734
 events <- MHASpread::events # Load the events database
 
 # Get the study region
@@ -14,7 +14,7 @@ RS <- read_municipality(
 # Selected seeded farm 
 population_map <- population %>%
   st_as_sf(coords = c("longitude", "latitude"), crs=4326)%>%
-  filter(population$node== 196734)
+  filter(population$node== 11256)
 
 # Map seeded farm  
 ggplot() +
@@ -24,14 +24,14 @@ ggplot() +
 
 # Run the stochastic simulation
 model_output <- stochastic_SEIR (
-  number_of_simulation = 1, # Number of model repeats
+  number_of_simulation = 2, # Number of model repeats
   number_of_threads = 1, #parallel::detectCores()-1, # Number of cores you will use
   population = population, # Population database
   events = events, # Events database
   simulation_name = "scenario_1_init", # Simulation tag name
-  days_of_simulation = 7, # Number of days FMD will be spreading
+  days_of_simulation = 20, # Number of days FMD will be spreading
   initial_day_simulation=1, # Initial day of simulation
-  max_distance_in_km= 40, # Maximum distance kernel for local disease spread
+  max_distance_in_km= 50, # Maximum distance kernel for local disease spread
   num_threads=1, #  Number of CPU to parallel tasks; set 1 to not overload your computer
   a = 0.012, # To set kernel curve max infection rate (S*I)/N when animals are in the same area
   b =  0.6, # Shape of the kernel curve
@@ -93,7 +93,7 @@ mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  
 #=========================================================#
 # So if we establish control areas zones from a specific simulation == 1 looks like:
 detected_farms.id <- MHASpread::id_of_infectious_farms(model_output[[1]]$populationdb,
-                                                       only_infected_comp = F) # FALSE will take all infection status
+                                                       only_infected_comp = T) # FALSE will take all infection status
 
 zones_arond_inft_farms <- assign_control_zones(
   population = population, # Population database

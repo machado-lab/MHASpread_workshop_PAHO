@@ -24,7 +24,7 @@ ggplot() +
 
 # Run the stochastic simulation
 model_output <- stochastic_SEIR (
-  number_of_simulation = 1, # Number of model repeats
+  number_of_simulation = 13, # Number of model repeats
   number_of_threads = 1, #parallel::detectCores()-1, # Number of cores you will use
   population = population, # Population database
   events = events, # Events database
@@ -112,7 +112,7 @@ plot_farms_in_control_zones_areas(zones_arond_inft_farms, detected_farms.id) # P
 
 control_model <- control_actions(
   # MODEL SETUP
-  num_threads = 4,                           # Number of CPUs
+  num_threads = 2,                           # Number of CPUs
   model_output = model_output,               # Output object from the initial infection [function stochastic_SEIR()]
   population_data = MHASpread::population,   # Population database, all animals are susceptible
   events = MHASpread::events,                # Movement events (in and/or out), birth or death

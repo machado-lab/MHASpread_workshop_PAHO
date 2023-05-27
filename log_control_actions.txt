@@ -1,4 +1,4 @@
-starting worker for localhost:11814 
+starting worker for localhost:11284 
 Type: EXEC 
 Loading required package: MHASpread
 Loading required package: tidyverse
@@ -36,7 +36,7 @@ loaded MHASpread and set parent environment
 Error in unserialize(node$con) : error reading from connection
 Calls: local ... doTryCatch -> recvData -> recvData.SOCKnode -> unserialize
 Execution halted
-ulate, when
+mulate, when
 
 Loading required package: iterators
 Loading required package: parallel
@@ -54,50 +54,8 @@ The following objects are masked from ‘package:snow’:
 [1] "movement ban done!"
 [1] "Depopulation done!"
 
- We are at the day 8 the current number of infected farm is 13
-at simulation id = 1[1] 9
-[1] "movement ban done!"
-[1] "Depopulation done!"
-
- We are at the day 9 the current number of infected farm is 18
-at simulation id = 1[1] 10
-[1] "movement ban done!"
-[1] "Depopulation done!"
-
- We are at the day 10 the current number of infected farm is 20
-at simulation id = 1[1] 11
-[1] "movement ban done!"
-[1] "Depopulation done!"
-
- We are at the day 11 the current number of infected farm is 29
-at simulation id = 1[1] 12
-[1] "movement ban done!"
-[1] "Depopulation done!"
-
- We are at the day 12 the current number of infected farm is 36
-at simulation id = 1[1] 13
-[1] "movement ban done!"
-[1] "Depopulation done!"
-[1] "Vaccination done !"
-
- We are at the day 13 the current number of infected farm is 52
-at simulation id = 1[1] 14
-[1] "movement ban done!"
-[1] "Depopulation done!"
-[1] "Vaccination done !"
-
- We are at the day 14 the current number of infected farm is 57
-at simulation id = 1[1] 15
-[1] "Control zones updated!"
-[1] "movement ban done!"
-[1] "Depopulation done!"
-[1] "Vaccination done !"
-
- We are at the day 15 the current number of infected farm is 60
-at simulation id = 1[1] 16
+ We are at the day 21 the current number of infected farm is 229
+at simulation id = 1[1] 22
 Reached the maximum number of tolerable infected farms Error in unserialize(node$con) : error reading from connection
 Calls: local ... doTryCatch -> recvData -> recvData.SOCKnode -> unserialize
-In addition: Warning message:
-In for (i in seq_along(quosures)) { :
-  closing unused connection 6 (<-localhost:11304)
 Execution halted
