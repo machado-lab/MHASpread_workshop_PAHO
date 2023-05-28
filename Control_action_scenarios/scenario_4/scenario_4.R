@@ -29,7 +29,7 @@ model_output <- stochastic_SEIR (
   population = population, # Population database
   events = events, # Events database
   simulation_name = "scenario_1_init", # Simulation tag name
-  days_of_simulation = 20, # Number of days FMD will be spreading
+  days_of_simulation = 7, # Number of days FMD will be spreading
   initial_day_simulation=1, # Initial day of simulation
   max_distance_in_km= 50, # Maximum distance kernel for local disease spread
   num_threads=1, #  Number of CPU to parallel tasks; set 1 to not overload your computer
