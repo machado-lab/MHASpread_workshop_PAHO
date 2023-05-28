@@ -263,6 +263,27 @@ This function will implement daily animal-level vaccination
 
 Here, we will visualize some results from the model after running the control actions.
 
+
+### see the geo-location of the farms
+```
+farms_location <-plot_nodes_kernel_map(model_output = model_output, population = population)
+farms_location
+```
+will produce a interactive map (click on viewer tab on Rstudio), in dittion when clicks on the frm will show the simulations stats for this spepecific loaction 
+
+<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/d336ea01-a369-42fe-958b-9efa0632c8d6" align="center" width="400" ></a>
+
+
+take a snapshot of the map
+```
+mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
+```
+
+
+
+
+
+
 #### Plot the number of infected farm considering initial spread + the control actions
 Lets see the results of the control actions when considering all farms types
 ```r
