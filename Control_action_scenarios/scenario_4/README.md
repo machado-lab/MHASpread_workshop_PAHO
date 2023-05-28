@@ -142,7 +142,7 @@ plot_farms_in_control_zones_areas(zones_arond_inft_farms, detected_farms.id) # P
 ```
 This will produce a interactive map in the *viewer tab*  like this: 
 
- <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" " align="center" width="400" ></a>
+ <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="400" ></a>
 
 
 Save a snapshot
@@ -263,6 +263,27 @@ This function will implement daily animal-level vaccination
 
 Here, we will visualize some results from the model after running the control actions.
 
+
+### see the geo-location of the farms
+```
+farms_location <-plot_nodes_kernel_map(model_output = model_output, population = population)
+farms_location
+```
+will produce a interactive map (click on viewer tab on Rstudio), in dittion when clicks on the frm will show the simulations stats for this spepecific loaction 
+
+<a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/d336ea01-a369-42fe-958b-9efa0632c8d6" align="center" width="400" ></a>
+
+
+take a snapshot of the map
+```
+mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
+```
+
+
+
+
+
+
 #### Plot the number of infected farm considering initial spread + the control actions
 Lets see the results of the control actions when considering all farms types
 ```r
@@ -318,3 +339,17 @@ Results of total vaccinated animals
 plot_vaccination(control_output = control_output, population = population, level_plot = "animals")
 ```
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/cad0ac86-d7a7-42ff-81f6-b9219e11efe8" align="center" width="400" ></a>
+          
+### calculate the number of staff member for each control action
+Number of staff to depopulion          
+```          
+plot_staff_overhead(control_output = control_model,
+                    population = population, parameter = "depopulation",
+                     staff  = 2, cumulative = F)
+```
+ Number of staff to vaccination  
+```          
+plot_staff_overhead(control_output = control_model,
+                    population = population, parameter = "vaccination",
+                    staff  = 2, cumulative = F)
+```
