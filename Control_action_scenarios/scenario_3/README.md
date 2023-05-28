@@ -326,7 +326,9 @@ plot_staff_overhead(control_output = control_model,
                     population = population, parameter = "depopulation",
                      staff  = 2, cumulative = F)
 ```
- Number of staff to vaccination              
+ Number of staff to vaccination  
+```          
 plot_staff_overhead(control_output = control_model,
                     population = population, parameter = "vaccination",
                     staff  = 2, cumulative = F)
+```
