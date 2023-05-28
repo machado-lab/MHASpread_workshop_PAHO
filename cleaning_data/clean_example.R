@@ -1,8 +1,8 @@
 #===========================================#
-#    Check and clean data.             ----- 
+#    Check and clean data             ----- 
 #===========================================#
 
-# load data 
+# Load data 
 load("~/Downloads/example.Rdata")
 
 # check the names population 
