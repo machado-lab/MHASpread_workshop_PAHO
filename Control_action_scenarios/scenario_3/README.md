@@ -142,7 +142,7 @@ plot_farms_in_control_zones_areas(zones_arond_inft_farms, detected_farms.id) # P
 ```
 This will produce a interactive map in the *viewer tab*  like this: 
 
- <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" " align="center" width="400" ></a>
+ <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="400" ></a>
 
 
 Save a snapshot
