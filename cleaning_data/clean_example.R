@@ -5,13 +5,13 @@
 # Load data 
 load("~/Downloads/example.Rdata")
 
-# check the names population 
+# Check the names population 
 names(MHASpread::population)[!names(MHASpread::population) 
                              %in% names(population)]
 
 str(population)
 
-# check the events match the population list 
+# Check the events match the population list 
 names(MHASpread::events)[!names(MHASpread::events) 
                              %in% names(events_final)]
 table(events_final$event_type)
@@ -27,10 +27,10 @@ events_final<-
 nodes.in.events <- events_final %>%
   pull(from, to ) %>% unique()
 
-# table how many events
+# Table how many events
 table(nodes.in.events %in% population$node)
 
-# cleaning events 
+# Cleaning events 
 events_final <- events_final %>%
   filter(to %in% population$node) %>%
   filter(from %in% population$node)
