@@ -175,16 +175,22 @@ plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
 #    Results of total depopulated   ----
 #==========================================#
 # Lets see the results of the depopulated farms over all simulation
-plot_depopulation(control_output = control_model, level_plot = "farms")
+plot_depopulation(control_output = control_model,
+                  level_plot = "farms")
 
 # Lets see the results of the depopulated animals over all simulation
-plot_depopulation(control_output = control_model, level_plot = "animals")
+plot_depopulation(control_output = control_model,
+                  level_plot = "animals")
 
 #==========================================#
 #   Results of total farms vaccinated   ----
 #==========================================#
 # Lets see the results of the vaccinated farms over all simulation
-plot_vaccination(control_output = control_model, population = population, level_plot = "farms")
+plot_vaccination(control_output = control_model,
+                 population = population,
+                 level_plot = "farms")
 
 # Lets see the results of the vaccinated animals over all simulation
-plot_vaccination(control_output = control_model, population = population, level_plot = "animals")
+plot_vaccination(control_output = control_model,
+                 population = population,
+                 level_plot = "animals")
