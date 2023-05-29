@@ -342,13 +342,13 @@ plot_vaccination(control_output = control_output, population = population, level
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/cad0ac86-d7a7-42ff-81f6-b9219e11efe8" align="center" width="400" ></a>
           
 ### calculate the number of staff member for each control action
-Number of staff to depopulion          
+Number of staff to depopulation          
 ```          
 plot_staff_overhead(control_output = control_model,
                     population = population, parameter = "depopulation",
                      staff  = 2, cumulative = F)
 ```
- Number of staff to vaccination  
+ Number of staff for vaccination   
 ```          
 plot_staff_overhead(control_output = control_model,
                     population = population, parameter = "vaccination",
