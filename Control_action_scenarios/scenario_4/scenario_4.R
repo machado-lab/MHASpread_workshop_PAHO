@@ -195,4 +195,17 @@ plot_vaccination(control_output = control_model,
                  population = population,
                  level_plot = "animals")
 
+#==========================================#
+#  Staff member overhead needed       ----
+#==========================================#
+# Number of staff to depopulate       
 
+plot_staff_overhead(control_output = control_model,
+                    population = population, parameter = "depopulation",
+                    staff  = 2, cumulative = F)
+
+# Number of staff to vaccinate 
+
+plot_staff_overhead(control_output = control_model,
+                    population = population, parameter = "vaccination",
+                    staff  = 2, cumulative = F)
