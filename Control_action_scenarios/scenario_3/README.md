@@ -324,7 +324,7 @@ plot_depopulation(control_output = control_output, level_plot = "animals")
 
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/70026a6e-6994-4ca7-8de7-5d4a2dde76ec" align="center" width="400" ></a>
 
-#### vaccinated farms distribution during the control actions simulated period
+#### Vaccinated farms distribution during the control actions simulated period
 
 Results of total vaccinated farms
 ```r
@@ -340,7 +340,7 @@ plot_vaccination(control_output = control_output, population = population, level
 ```
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/cad0ac86-d7a7-42ff-81f6-b9219e11efe8" align="center" width="400" ></a>
           
-### calculate the number of staff member for each control action
+### Calculate the number of staff member for each control action
 Number of staff to depopulate          
 ```          
 plot_staff_overhead(control_output = control_model,
