@@ -112,7 +112,7 @@ plot_farms_in_control_zones_areas(zones_arond_inft_farms, detected_farms.id) # P
 
 control_model <- control_actions(
   # MODEL SETUP
-  num_threads = 4,                           # Number of CPUs
+  num_threads = 1,                           # Number of CPUs
   model_output = model_output,               # Output object from the initial infection [function stochastic_SEIR()]
   population_data = MHASpread::population,   # Population database, all animals are susceptible
   events = MHASpread::events,                # Movement events (in and/or out), birth or death
@@ -202,10 +202,10 @@ plot_vaccination(control_output = control_model,
 
 plot_staff_overhead(control_output = control_model,
                     population = population, parameter = "depopulation",
-                    staff  = 2, cumulative = F)
+                    staff  = 2)
 
 # Number of staff to vaccinate 
 
 plot_staff_overhead(control_output = control_model,
                     population = population, parameter = "vaccination",
-                    staff  = 2, cumulative = F)
+                    staff  = 2)
