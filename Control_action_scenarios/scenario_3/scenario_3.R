@@ -25,12 +25,12 @@ ggplot() +
 
 # Run the stochastic simulation
 model_output <- stochastic_SEIR (
-  number_of_simulation = 3, # Number of model repeats
-  number_of_threads = 1, #parallel::detectCores()-1, # Number of cores you will use
+  number_of_simulation = 20, # Number of model repeats
+  number_of_threads = 4, #parallel::detectCores()-1, # Number of cores you will use
   population = population, # Population database
   events = events, # Events database
   simulation_name = "scenario_1_init", # Simulation tag name
-  days_of_simulation = 7, # Number of days FMD will be spreading
+  days_of_simulation = 15, # Number of days FMD will be spreading
   initial_day_simulation=1, # Initial day of simulation
   max_distance_in_km= 40, # Maximum distance kernel for local disease spread
   num_threads=1, #  Number of CPU to parallel tasks; set 1 to not overload your computer
@@ -56,7 +56,8 @@ model_output <- stochastic_SEIR (
 #      Initial spread epidemic curves (farm-level)    ----
 #=========================================================#
 # Plot infected farms distribution, all species
-plot_infected_farms_curve(model_output = model_output, host = "All host")
+plot_infected_farms_curve(model_output = model_output, host = "All host")+
+  scale_x_continuous(name="Days") 
 
 #Plot infected farms distribution, bovine
 plot_infected_farms_curve(model_output = model_output, host = "Bovine")
