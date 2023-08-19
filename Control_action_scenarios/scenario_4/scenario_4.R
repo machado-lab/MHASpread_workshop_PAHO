@@ -22,6 +22,7 @@ ggplot() +
   geom_sf(data = RS, fill = NA, color = "grey", size = 0.005, alpha = 2)+
   labs(subtitle="Municipalities de Rio Grand do Sul", size=8) 
 
+ggsave(last_plot(), file = "plot_infected.png", width = 10, height = 8)
 # Run the stochastic simulation
 model_output <- stochastic_SEIR (
   number_of_simulation = 2, # Number of model repeats
