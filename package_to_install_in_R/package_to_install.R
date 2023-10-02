@@ -37,6 +37,7 @@ if (!require(emo)){devtools::install_github("hadley/emo")};library(emo)
 if (!require(reticulate)){install.packages("reticulate") };library(reticulate)
 reticulate::install_miniconda()
 reticulate::py_install("pandas")
+reticulate::py_install("scipy")
 # if you still have issues try this
 #conda_install("r-reticulate", "pandas")
 
