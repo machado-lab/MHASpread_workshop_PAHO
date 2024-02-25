@@ -50,7 +50,7 @@ Gustavo Machado [![ORCIDiD](https://info.orcid.org/wp-content/uploads/2019/11/or
 
 
 ## :computer: Website
-[MachadoLAb](https://machado-lab.github.io/) 
+[Machado Laboratory website](https://machado-lab.github.io/) 
 
 ## :muscle: Sponsors
 <a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/pahologo.png?raw=true" align="center" width="300" ></a>
