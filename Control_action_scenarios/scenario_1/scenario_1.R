@@ -1,7 +1,7 @@
 #################################################
 #      Test the package with EpiShark           #
 #################################################
-setwd("~/Documents/repos/EpiShark/developer/examples_files")
+#setwd("~/Documents/repos/EpiShark/developer/examples_files")
 # Install and load the EpiShark package from GitHub
 # devtools::install_github(repo='machado-lab/EpiShark',
 #                          auth_token = "paste_token_here",
@@ -17,16 +17,16 @@ run_one_farm_seir(Susceptible_pop = 100,       # Initial susceptible population
                   days_of_simulation = 10,      # Duration of simulation in days
                   number_of_simulation= 1)      # Number of simulations
 
-# Run SEIR model 20 times to observe stochasticity
+# Run SEIR model 20 repeats to observe stochastic dynamics
 run_one_farm_seir(Susceptible_pop = 100,       # Initial susceptible population
                   Host = "swi",                 # Host species (e.g., bovine)
                   initial_num_infected = 1,     # Initial number of infected individuals
                   days_of_simulation = 30,      # Duration of simulation in days
                   number_of_simulation= 20)     # Number of simulations
 
-###########################################################################
-# Run SEIR model with several farms                                       #
-###########################################################################
+###############################################################
+# Run SEIR model with one or many initially infected farms ----
+###############################################################
 
 # Load example population data
 population = EpiShark::population
@@ -35,16 +35,16 @@ population = EpiShark::population
 initial_infected_farm_id = 666
 population$I_bov_pop[population$node == initial_infected_farm_id] <- 1
 
-# Run the SEIR model to simulate disease spread
+# Run the SEIR model to simulate disease spread without control measures
 resultado <- disease_spread_sim(
-  population =  population,          # Population database
-  events = EpiShark::events ,        # Events database
+  population =  population,              # Population database
+  events = EpiShark::events,             # Events database
   simulation_name = "scenario_1_init",   # Simulation tag name
-  days_of_simulation = 20,            # Duration of simulation in days
-  initial_day_simulation=1)           # Initial day of simulation
+  days_of_simulation = 30,               # Duration of simulation in days
+  initial_day_simulation=1)              # Initial day of simulation
 
 #=========================================================#
-##  Initial Spread Epidemic Curves of Farms   ----
+##  Initial Spread Epidemic Curves of Farms           ----
 #=========================================================#
 
 # Plot infected farms curves considering all host species
@@ -63,9 +63,9 @@ ggsave(last_plot(), file = "plot_infected_farms_curve_swi.png", width = 10, heig
 plot_infected_farms_curve(model_output = resultado, host = "Small ruminants")
 ggsave(last_plot(), file = "plot_infected_farms_curve_small.png", width = 10, height = 8)
 
-#=========================================================#
-##  Initial Spread Epidemic Curves of Animals   ----
-#=========================================================#
+#========================================================#
+##  Initial Spread Epidemic Curves of Animals       ----
+#========================================================#
 
 # Plot infected animal curves considering all host species
 plot_SEIR_animals(model_output = resultado, plot_suceptible_compartment = F, by_host = FALSE)
@@ -82,11 +82,11 @@ farms_location <- plot_nodes_kernel_map(model_output = resultado,
 farms_location
 mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  # Save the map
 
-#=========================================================#
-##             SIMULATE CONTROL ACTIONS   ----
-#=========================================================#
+#========================================================#
+##             Simulate control actions            ----
+#========================================================#
 
-##  Control Zones Areas    ----
+##  Control Zones Areas ----
 
 # Detect the infected farms for control zone setup
 detected_farms.id <- get_infected_farms(
@@ -98,8 +98,8 @@ detected_farms.id <- get_infected_farms(
 reticulate::source_python(system.file("python/control_zones.py", package = "EpiShark"))
 control_zones_areas = assign_control_zones(population = population,
                                            infected_size = 3,
-                                           buffer_size = 7 ,
-                                           surveillance_size = 15 ,
+                                           buffer_size = 7,
+                                           surveillance_size = 15,
                                            detected_farms_id = detected_farms.id)
 
 # Plot interactive map for control zones
@@ -107,24 +107,24 @@ control_zones_plot = plot_farms_in_control_zones_areas(control_zones_areas, dete
 control_zones_plot
 mapview::mapshot(control_zones_plot, file = "Control_zones_example.png")  # Save the map
 
-###########################################################################
-# Simulate control action  ------------------------------------------------
-###########################################################################
+##############################################################
+# Simulate control action                               ------
+##############################################################
 
-# MODEL SETUP
+# Model setup
 model_output = resultado  # Output of the SEIR model representing the spread of the disease
 break_sim_if = 100  # Threshold for terminating the simulation if the number of infected farms exceeds this value
 first_detectn_proportion = 0.1  # Proportion of initially detected infected farms
 
-# INITIAL CONDITION OF THE CONTROL ACTIONS
+# Initial condition for control actions
 days_of_control_action = 60  # Number of days for which control actions will be implemented
 
-# CONTROL ZONES AREAS SETUP
+# Control zones setup
 infected_size_cz = 3  # Size in kilometers of the infected zone
 buffer_size_cz = 7  # Size in kilometers of the buffer zone
 surveillance_size_cz = 15  # Size in kilometers of the surveillance zone
 
-# ANIMAL MOVEMENTS STANDSTILL SETUP
+# Animal movement standstill setup
 ban_length = 30  # Duration of animal movement standstill in days
 infected_zone_mov = TRUE  # Indicator for applying the animal movement ban to the infected zone
 buffer_zone_mov = TRUE  # Indicator for applying the animal movement ban to the buffer zone
@@ -132,12 +132,12 @@ surveillance_zone_mov = FALSE  # Indicator for applying the animal movement ban 
 direct_contacts_mov = TRUE  # Indicator for subjecting farms outside control zones with contact with positive farms to movement restrictions
 traceback_length_mov = 1  # Number of steps to traceback in-going animal movements of infected farms
 
-# DEPOPULATION SETUP
+# Depopulation setup
 limit_per_day_farms_dep = 3  # Limit of farms to be depopulated per day
 depopulate_infected_zone = TRUE  # Indicator for applying depopulation in the infected area
 depopulate_detected_farms = TRUE  # Indicator for only depopulating detected farms in the infected area
 
-# VACCINATION SETUP
+# Vaccination setup
 days_to_get_inmunity = 15  # Number of days for full immunity (100% immune)
 limit_per_day_farms_vac = 40  # Limit of farms to be vaccinated per day in the buffer area
 limit_per_day_farms_infct_vac = 40  # Limit of farms to be vaccinated per day in the infected area
@@ -150,7 +150,7 @@ buffer_zone_vac = TRUE  # Indicator for applying vaccination to the buffer zone
 vacc_infectious_farms = TRUE  # Indicator for applying vaccination to infectious farms
 vacc_delay = 1  # Number of days for vaccine delay
 
-# RUN CONTROL ACTION MODEL
+# Run all control actions ----
 control_model = control_actions_sim(resultado, population, events, break_sim_if,
                                     days_of_control_action, infected_size_cz,
                                     buffer_size_cz, surveillance_size_cz,
@@ -205,9 +205,9 @@ plot_depopulation_cost(control_output = control_model,
                        cumulative = T)
 ggsave(last_plot(), file = "plot_depopulation_cost_farm.png", width = 10, height = 8)
 
-#==================================================#
+#===================================================#
 #  Vaccinated results of the control actions    ----
-#==================================================#
+#===================================================#
 
 # Plot results of vaccinated farms and animals over all simulations
 plot_vaccination(control_output = control_model,
@@ -248,6 +248,3 @@ plot_staff_overhead(control_output = control_model,
 
 # Plot Number of Farms by Control Zone over time
 plot_number_farm_by_control_zone(control_model)
-
-
-
