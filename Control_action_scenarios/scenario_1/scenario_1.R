@@ -12,14 +12,14 @@ library(EpiShark)
 # Run SEIR dynamic in a single farm
 # Initialize parameters for the SEIR model simulation
 run_one_farm_seir(Susceptible_pop = 100,        # Initial susceptible population
-                  Host = "cattle",               # Host species (e.g., bovine or bov)
+                  Host = "bov",               # Host species (e.g., bovine or bov)
                   initial_num_infected = 1,     # Initial number of infected individuals
                   days_of_simulation = 10,      # Duration of simulation in days
                   number_of_simulation= 1)      # Number of simulations
 
 # Run SEIR model 20 repeats to observe stochastic dynamics
 run_one_farm_seir(Susceptible_pop = 100,        # Initial susceptible population
-                  Host = "cattle",               # Host species (e.g., bovine or bov)
+                  Host = "bov",               # Host species (e.g., bovine or bov)
                   initial_num_infected = 1,     # Initial number of infected individuals
                   days_of_simulation = 30,      # Duration of simulation in days
                   number_of_simulation= 20)     # Number of simulations
