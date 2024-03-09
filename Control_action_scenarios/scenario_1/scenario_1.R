@@ -36,7 +36,7 @@ initial_infected_farm_id = 666
 population$I_bov_pop[population$node == initial_infected_farm_id] <- 1 # One infected animal
 
 # Run the SEIR model to simulate disease spread without control measures
-resultado <- disease_spread_sim(
+results <- disease_spread_sim(
   population =  population,              # Population database (contains list of farms)
   events = EpiShark::events,             # Events database (e.g., contains list of movement events)
   simulation_name = "scenario_1_init",   # Simulation tag name (you can change to what you like)
@@ -48,19 +48,19 @@ resultado <- disease_spread_sim(
 #=========================================================#
 
 # Plot number of infected farms for all host species
-plot_infected_farms_curve(model_output = resultado)
+plot_infected_farms_curve(model_output = results)
 ggsave(last_plot(), file = "plot_infected_farms_curve_all.png", width = 10, height = 8)
 
 # Plot number of infected farms for bovine
-plot_infected_farms_curve(model_output = resultado, host = "Bovine")
+plot_infected_farms_curve(model_output = results, host = "Bovine")
 ggsave(last_plot(), file = "plot_infected_farms_curve_bov.png", width = 10, height = 8)
 
 # Plot number of infected farms for swine
-plot_infected_farms_curve(model_output = resultado, host = "Swine")
+plot_infected_farms_curve(model_output = results, host = "Swine")
 ggsave(last_plot(), file = "plot_infected_farms_curve_swi.png", width = 10, height = 8)
 
 # Plot number of infected farms for small ruminants
-plot_infected_farms_curve(model_output = resultado, host = "Small ruminants")
+plot_infected_farms_curve(model_output = results, host = "Small ruminants")
 ggsave(last_plot(), file = "plot_infected_farms_curve_small.png", width = 10, height = 8)
 
 #========================================================#
@@ -68,15 +68,15 @@ ggsave(last_plot(), file = "plot_infected_farms_curve_small.png", width = 10, he
 #========================================================#
 
 # Plot number of infected animals for all host species
-plot_SEIR_animals(model_output = resultado, plot_suceptible_compartment = F, by_host = FALSE)
+plot_SEIR_animals(model_output = results, plot_suceptible_compartment = F, by_host = FALSE)
 ggsave(last_plot(), file = "plot_SEIR_animals_by_host.png", width = 10, height = 8)
 
 # Plot number of infected animals by host species
-plot_SEIR_animals(model_output = resultado, plot_suceptible_compartment = FALSE, by_host = TRUE)
+plot_SEIR_animals(model_output = results, plot_suceptible_compartment = FALSE, by_host = TRUE)
 ggsave(last_plot(), file = "plot_SEIR_animals_all.png", width = 10, height = 8)
 
 # Explore the spatial distribution of infected farms
-farms_location <- plot_nodes_kernel_map(model_output = resultado,
+farms_location <- plot_nodes_kernel_map(model_output = results,
                                         population = population,
                                         initial_infected_farm = initial_infected_farm_id)
 farms_location
@@ -88,7 +88,7 @@ mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  
 
 # Detect list of infected farms in control zones
 detected_farms.id <- get_infected_farms(
-  resultado$populationdb[resultado$populationdb$day == max(resultado$populationdb$day), ],
+  results$populationdb[results$populationdb$day == max(results$populationdb$day), ],
   only_infected_comp = TRUE)
 
 # Assign control zones around infected farms
@@ -109,7 +109,7 @@ mapview::mapshot(control_zones_plot, file = "Control_zones_example.png")  # Save
 ##############################################################
 
 # Setup for control actions ----
-model_output = resultado  # Output of the SEIR model
+model_output = results  # Output of the SEIR model
 break_sim_if = 100 # Threshold for terminating simulations if the number of infected farms exceeds this value
 first_detectn_proportion = 0.1 # Proportion of initially detected infected farms
 
@@ -148,7 +148,7 @@ vacc_infectious_farms = TRUE # Indicator for applying vaccination to infectious 
 vacc_delay = 1 # Number of days for vaccine delay (e.g., time until animals received the first dose in the field)
 
 # Run all control actions you defined in the previously  sections ----
-control_model = control_actions_sim(resultado,
+control_model = control_actions_sim(results,
                                     population,
                                     events,
                                     break_sim_if,
@@ -180,7 +180,7 @@ control_model = control_actions_sim(resultado,
 
 # Plot epidemic curves and control actions results for all farm types
 plot_epi_curve_mean_and_cntrl_act(
-  model_inital = resultado,
+  model_inital = results,
   model_control = control_model,
   control_action_start_day = min(control_model[[2]]$population_by_day$day),
   plot_only_total_farms = TRUE)
@@ -188,14 +188,14 @@ plot_epi_curve_mean_and_cntrl_act(
 ggsave(last_plot(), file = "plot_epi_curve_mean_and_cntrl_act_all_farm.png", width = 10, height = 8)
 
 # Lets see the results of the control actions by farms types
-plot_epi_curve_mean_and_cntrl_act(model_inital = resultado,
+plot_epi_curve_mean_and_cntrl_act(model_inital = results,
                                   model_control = control_model,
                                   control_action_start_day =  min(control_model[[2]]$population_by_day$day),
                                   plot_only_total_farms = FALSE)
 ggsave(last_plot(), file = "plot_epi_curve_mean_and_cntrl_act_by_host.png",width = 10, height = 8)
 
 # Visualize the daily spread dynamics in  an interactive map
-plotNodesByDay(model_output = resultado, control_output = control_model)
+plotNodesByDay(model_output = results, control_output = control_model)
 
 #===============================================#
 ##    The distribution of depopulated farms ----
