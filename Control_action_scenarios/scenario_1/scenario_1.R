@@ -105,7 +105,7 @@ control_zones_plot
 mapview::mapshot(control_zones_plot, file = "Control_zones_example.png")  # Save the map
 
 ##############################################################
-##.            Simulate control action                 ------
+##            Simulate control action                 ------
 ##############################################################
 
 # Setup for control actions ----
