@@ -24,9 +24,9 @@ run_one_farm_seir(Susceptible_pop = 100,        # Initial susceptible population
                   days_of_simulation = 30,      # Duration of simulation in days
                   number_of_simulation= 20)     # Number of simulations
 
-###############################################################
-# Run SEIR model with one or many initially infected farms ----
-###############################################################
+#######################################################################
+# Run SEIR model with one or many initially cattle farm infected farms ----
+######################################################################
 
 # Load example population data
 population = EpiShark::population
