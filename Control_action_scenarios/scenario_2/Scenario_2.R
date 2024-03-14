@@ -32,8 +32,9 @@ run_one_farm_seir(Susceptible_pop = 100,        # Initial susceptible population
 population = EpiShark::population
 
 # Select the farm that you will like to have as the index infected farm (Farm ID: 666)
-initial_infected_farm_id = 666
+initial_infected_farm_id = 266844
 population$I_bov_pop[population$node == initial_infected_farm_id] <- 1 # One infected animal
+plot_leaflet_map_farms(population[population$node == initial_infected_farm_id,])
 
 # Run the SEIR model to simulate disease spread without control measures
 results <- disease_spread_sim(
