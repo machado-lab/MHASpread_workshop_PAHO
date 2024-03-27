@@ -1,4 +1,4 @@
-# MHASpread:  A multi-host Animal Spread Stochastic Multilevel Model(version 0.2.0) 
+# MHASpread:  A multi-host Animal Spread Stochastic Multilevel Model(version 3.0.0) 
 
 ![generic](https://img.shields.io/badge/Control_actions-up-green) ![generic1](https://img.shields.io/badge/Spatial_transmission-up-green) ![generic2](https://img.shields.io/badge/Network_level-up-green) ![generic3](https://img.shields.io/badge/Vital_dynamics-Up-green) ![generic4](https://img.shields.io/badge/SEIR_model-Up-green)
 
