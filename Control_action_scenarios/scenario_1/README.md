@@ -1,13 +1,13 @@
 
 # Scenario 1 (cattle)
 
-Here, we describe the population and events data used for dissemination and control actions. The datasets provided are a fair representation of the actual farm density ratio distribution of the farms, in the same way, movement events provided here are similar to real between-farm movement network.
+Here, we describe the population and events data used for dissemination and control actions. The datasets provided are a fair representation of the actual farm density ratio distribution of the farms, in the same way, movement events provided here are similar to real between-farm movement networks.
 
 ## Backgroud 
 
 The infection starts at the farm node with ID= `196734` which has a population of `100` animals. 
 Here, FMD was first detected `14` days after the initial disease introduction (infection started with `40` infected animals).
-## Data preparation
+## Data Preparation
 
 1. Population data: total number of animals
 
@@ -141,7 +141,7 @@ zones_arond_inft_farms <- assign_control_zones(
 plot_farms_in_control_zones_areas(zones_arond_inft_farms, detected_farms.id) # Plot interactive map      
 
 ```
-This will produce a interactive map in the *viewer tab*  like this: 
+This will produce an interactive map in the *viewer tab*  like this: 
 
  <a href="url"><img src="https://user-images.githubusercontent.com/41584216/206781762-bb397ee0-4847-4b34-bddf-28b05d40d00a.png" align="center" width="400" ></a>
 
@@ -270,7 +270,7 @@ Here, we will visualize some results from the model after running the control ac
 farms_location <-plot_nodes_kernel_map(model_output = model_output, population = population)
 farms_location
 ```
-will produce a interactive map (click on viewer tab on Rstudio), in dittion when clicks on the frm will show the simulations stats for this spepecific loaction 
+will produce an interactive map (click on the viewer tab on Rstudio), in addition when clicks on the farm will show the simulation stats for this specific location 
 
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/d336ea01-a369-42fe-958b-9efa0632c8d6" align="center" width="400" ></a>
 
@@ -285,8 +285,8 @@ mapview::mapshot(farms_location, file = "initial_outbreak_farms_location.png")  
 
 
 
-#### Plot the number of infected farm considering initial spread + the control actions
-Lets see the results of the control actions when considering all farms types
+#### Plot the number of infected farms considering initial spread + the control actions
+Let's see the results of the control actions when considering all farm types
 ```r
 plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
                                   model_control = control_output,
@@ -309,7 +309,7 @@ plot_epi_curve_mean_and_cntrl_act(model_inital = model_output,
 
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/132366a0-53de-490a-a5ad-8000a1aad356" align="center" width="400" ></a>
 
-#### Depopulated farms distribution during the control actions simulated period 
+#### Depopulated farm distribution during the control actions simulated period 
 
 Results of total farms depopulated
 ```r
@@ -341,7 +341,7 @@ plot_vaccination(control_output = control_output, population = population, level
 ```
 <a href="url"><img src="https://github.com/machado-lab/MHASpread_workshop_PAHO/assets/41584216/cad0ac86-d7a7-42ff-81f6-b9219e11efe8" align="center" width="400" ></a>
           
-### calculate the number of staff member for each control action
+### Calculate the number of staff members for each control action
 Number of staff to depopulation          
 ```          
 plot_staff_overhead(control_output = control_model,
