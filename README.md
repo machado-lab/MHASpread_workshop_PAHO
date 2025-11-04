@@ -26,6 +26,23 @@ Al finalizar este taller, podrás:
 
 ---
 
+## 📅 Cronograma del taller
+
+| **Tema** | **Actividad y asignación** | **Fecha** |
+|-----------|-----------------------------|------------|
+| **Presentaciones de talleres** | Videollamada instalando R & RStudio. Introducción del taller y configuración de RStudio en tu computadora. | Octubre 28, 2025 |
+| **Comprobar los datos y el formato del modelo (NCSU y PANAFTOSA)** | Videollamada para revisar los datos requeridos en el formato correcto para el modelado de enfermedades. | Noviembre 4, 2025 |
+| **Lectura: Una introducción práctica al modelado mecanicista de la transmisión de enfermedades en la ciencia veterinaria** | Este documento asegura que todos los participantes tengan experiencia en modelado antes del taller. La publicación académica se puede encontrar [aquí](https://doi.org/10.3389/fvets.2020.546651). | Noviembre 19, 2025 |
+| **Lectura: Simulación de la dinámica y el control de la fiebre aftosa en Bolivia** | Este documento presenta un ejemplo de caso real del uso de MHASpread. La publicación académica se puede encontrar [aquí](https://doi.org/10.1155/tbed/9055612). | Noviembre 26, 2025 |
+
+---
+
+
+
+
+
+
+
 ## 💾 Datos y archivos necesarios
 
 Trabajaremos con datos multiespecie (bovinos, porcinos y pequeños rumiantes) para explorar la aplicación real de los modelos. Los conjuntos de datos requeridos incluyen:
