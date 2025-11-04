@@ -87,7 +87,7 @@ Visita el sitio oficial del laboratorio para más recursos e investigaciones:
 
 ---
 
-## 💪 Patrocinadores
+## 💪 Energizado y patrocinado por: 
 <a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/fundesalogo.jpg?raw=true" align="left" width="200" ></a>
 <a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/ncstate-type-4x1-red-min.png?raw=true" align="left" width="200" ></a>
 <a href="url"><img src="https://github.com/ncespedesc/logos_nc_state/blob/main/seapilogo.png?raw=true" align="left" width="300" ></a>
