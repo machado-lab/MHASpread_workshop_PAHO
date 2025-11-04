@@ -9,7 +9,7 @@ Durante cuatro días, aprenderás a usar modelos matemáticos para **simular la 
 
 El taller está enfocado en la aplicación práctica de modelos epidemiológicos, utilizando datos reales para simular brotes de **fiebre aftosa (FMD)**.  
 
-> 🔍 **Usaremos MHASpread**: un modelo estocástico multinivel para la diseminación entre múltiples especies (versión 0.1.1). Este paquete de R permite definir parámetros de transmisión específicos por especie y simular dinámicas complejas, como movimientos entre granjas, traslados a mataderos, nacimientos y muertes.  
+> 🔍 **Usaremos MHASpread**: un modelo estocástico multinivel para la diseminación entre múltiples especies (versión 3.0). Este paquete de R permite definir parámetros de transmisión específicos por especie y simular dinámicas complejas, como movimientos entre granjas, traslados a mataderos, nacimientos y muertes.  
 
 Aprenderás paso a paso cómo usar MHASpread para **simular la introducción y diseminación de la FMD**, explorando herramientas epidemiológicas y computacionales dentro de un flujo de trabajo fácil de seguir.
 
@@ -19,7 +19,7 @@ Aprenderás paso a paso cómo usar MHASpread para **simular la introducción y d
 
 Al finalizar este taller, podrás:
 
-- 🧩 Comprender los principios básicos detrás del paquete **MHASpread v0.1.0**.  
+- 🧩 Comprender los principios básicos detrás del paquete **MHASpread v3.0**.  
 - 📈 Interpretar los resultados y salidas del modelo.  
 - 💉 Simular estrategias de control como **despoblación, vacunación y trazabilidad**.  
 - 🔄 Conocer otros modelos de transmisión aplicables a la salud animal.  
