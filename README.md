@@ -41,7 +41,7 @@ Al finalizar este taller, podrás:
 
 
 
-
+<details>
 
 ## 💾 Datos y archivos necesarios
 
@@ -65,7 +65,8 @@ Cualquier computadora moderna (de los últimos 5 años) puede ejecutar R y RStud
 - 📂 Espacio libre en disco: 65 GB.  
 
 ---
-
+</details>
+   
 ## 🔗 Enlaces útiles
 
 - 📘 [Cómo instalar R y RStudio](https://github.com/machado-lab/workshop_MHASpread/blob/main/install_RStudio_and_packages/README.md)  
