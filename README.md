@@ -5,7 +5,7 @@
 ## 🎓 Bienvenido al taller
 
 ¡Bienvenido! 👋  
-Durante cuatro días, aprenderás a usar modelos matemáticos para **simular la propagación y control de enfermedades en animales de producción**. Nuestro objetivo es ayudarte a comprender cómo estos modelos pueden apoyar la toma de decisiones **antes**, **durante** y **después** de una emergencia sanitaria animal.
+Durante este taller prenderás a usar modelos matemáticos para **simular la propagación y control de enfermedades en animales de producción**. Nuestro objetivo es ayudarte a comprender cómo estos modelos pueden apoyar la toma de decisiones **antes**, **durante** y **después** de una emergencia sanitaria animal.
 
 El taller está enfocado en la aplicación práctica de modelos epidemiológicos, utilizando datos reales para simular brotes de **fiebre aftosa (FMD)**.  
 
