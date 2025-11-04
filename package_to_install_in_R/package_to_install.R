@@ -28,4 +28,7 @@ reticulate::py_install("sys")
 
 # If you still have issues try this
 #conda_install("r-reticulate", "pandas")
-
+# if error in chanel 
+#library(reticulate)
+#pickle <- import("pickle")
+#sys <- import("sys")
