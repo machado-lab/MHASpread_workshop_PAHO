@@ -4,11 +4,11 @@ if (webshot::is_phantomjs_installed()==F) {  # additional software to screen sho
   webshot::install_phantomjs()
 }
 library(remotes)
-remotes::install_github(repo='machado-lab/MHASpread',
+remotes::install_github(repo='machado-lab/EpiShark',
                         auth_token = "replace_token_here",
                         force=T)
 #check
-require(MHASpread)
-if (!require(MHASpread)==F){hello()}
+require(EpiShark)
+if (!require(EpiShark)==F){hello()}
                         
                         
