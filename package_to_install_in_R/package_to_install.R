@@ -15,7 +15,8 @@ if (!require(devtools)){install.packages("devtools") };library(devtools)
 if (!require(shiny)){install.packages("shiny") };library(shiny)
 if (!require(reticulate)){install.packages("reticulate") };library(reticulate)
 if (!require(webshot)){install.packages("webshot") };library(webshot)
-
+if (!require(rnaturalearth)){install.packages("rnaturalearth") };library(rnaturalearth)
+if (!require(ggspatial)){install.packages("ggspatial") };library(ggspatial)
 
 # add py 3 with Python libraries
 reticulate::install_miniconda()
