@@ -17,7 +17,20 @@ if (!require(reticulate)){install.packages("reticulate") };library(reticulate)
 if (!require(webshot)){install.packages("webshot") };library(webshot)
 if (!require(rnaturalearth)){install.packages("rnaturalearth") };library(rnaturalearth)
 if (!require(ggspatial)){install.packages("ggspatial") };library(ggspatial)
-if (!require(rnaturalearthhires)){install.packages("rnaturalearthhires") };library(rnaturalearthhires)
+if (!require(rnaturalearthhires)){install.packages(
+  "rnaturalearthhires",
+  repos = "https://ropensci.r-universe.dev",
+  type = "source"
+)) };library(rnaturalearthhires)
+
+
+
+
+
+
+
+
+
 
 
 # add py 3 with Python libraries
